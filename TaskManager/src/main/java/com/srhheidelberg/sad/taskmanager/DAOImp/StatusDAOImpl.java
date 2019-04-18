@@ -17,6 +17,7 @@ public class StatusDAOImpl implements StatusDAOInterface {
 
 	@Override
 	public List<Status> getAllStatus() {
+		// TODO Auto-generated method stub
 		return statusJPARepository.findAll();
 	}
 
