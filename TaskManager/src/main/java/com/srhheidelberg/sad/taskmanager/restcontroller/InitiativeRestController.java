@@ -31,7 +31,7 @@ public class InitiativeRestController {
 	}
 	
 	@GetMapping("/")
-	public List<Initiative> getAllInitiative(ModelMap modelMap, @PathVariable Integer initiativeId) {
+	public List<Initiative> getAllInitiative() {
 		return initiativeDAOInterface.getAllInitiative();
 	}
 
