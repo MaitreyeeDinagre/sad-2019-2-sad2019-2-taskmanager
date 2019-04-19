@@ -25,19 +25,19 @@ public class Story {
 	private String storyName;
 	
 	@Column(name="storyestimatedgrand")
-	private int storyEstimatedGrand;	
+	private Integer storyEstimatedGrand;	
 	
 	@Column(name="storyactualgrand")
-	private int storyActualGrand;
+	private Integer storyActualGrand;
 	
 	@Column(name="isstorycurrent")
-	private int isstoryCurrent;
+	private Boolean isstoryCurrent;
 	
 	@Column(name="storyassignedto", insertable=false, updatable=false)
-	private int storyAssignedTo;
+	private Integer storyAssignedTo;
 	
 	@Column(name="storystatus", insertable=false, updatable=false)
-	private String storyStatus;
+	private Integer storyStatus;
 	
 	@OneToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="storyassignedto")
@@ -75,31 +75,31 @@ public class Story {
 		return storyActualGrand;
 	}
 
-	public void setStoryActualGrand(int storyActualGrand) {
+	public void setStoryActualGrand(Integer storyActualGrand) {
 		this.storyActualGrand = storyActualGrand;
 	}
 
-	public int getIsstoryCurrent() {
+	public Boolean getIsstoryCurrent() {
 		return isstoryCurrent;
 	}
 
-	public void setIsstoryCurrent(int isstoryCurrent) {
+	public void setIsstoryCurrent(Boolean isstoryCurrent) {
 		this.isstoryCurrent = isstoryCurrent;
 	}
 
-	public int getStoryAssignedTo() {
+	public Integer getStoryAssignedTo() {
 		return storyAssignedTo;
 	}
 
-	public void setStoryAssignedTo(int storyAssignedTo) {
+	public void setStoryAssignedTo(Integer storyAssignedTo) {
 		this.storyAssignedTo = storyAssignedTo;
 	}
 
-	public String getStoryStatus() {
+	public Integer getStoryStatus() {
 		return storyStatus;
 	}
 
-	public void setStoryStatus(String storyStatus) {
+	public void setStoryStatus(Integer storyStatus) {
 		this.storyStatus = storyStatus;
 	}
 	

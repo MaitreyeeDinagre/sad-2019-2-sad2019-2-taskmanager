@@ -28,16 +28,16 @@ public class Task {
 	private String taskDescription;
 	
 	@Column(name="taskestimatedtime")
-	private int taskEstimatedTime;
+	private Integer taskEstimatedTime;
 	
 	@Column(name="taskactualtime")
-	private int taskActualTime;
+	private Integer taskActualTime;
 	
 	@Column(name="taskassignedto", insertable=false, updatable=false)
-	private int taskAssignedTo;
+	private Integer taskAssignedTo;
 	
 	@Column(name="taskstatus", insertable=false, updatable=false)
-	private int taskStatus;
+	private Integer taskStatus;
 	
 	@OneToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="taskassignedto")
@@ -71,35 +71,35 @@ public class Task {
 		this.taskDescription = taskDescription;
 	}
 
-	public int getTaskEstimatedTime() {
+	public Integer getTaskEstimatedTime() {
 		return taskEstimatedTime;
 	}
 
-	public void setTaskEstimatedTime(int taskEstimatedTime) {
+	public void setTaskEstimatedTime(Integer taskEstimatedTime) {
 		this.taskEstimatedTime = taskEstimatedTime;
 	}
 
-	public int getTaskActualTime() {
+	public Integer getTaskActualTime() {
 		return taskActualTime;
 	}
 
-	public void setTaskActualTime(int taskActualTime) {
+	public void setTaskActualTime(Integer taskActualTime) {
 		this.taskActualTime = taskActualTime;
 	}
 
-	public int getTaskAssignedTo() {
+	public Integer getTaskAssignedTo() {
 		return taskAssignedTo;
 	}
 
-	public void setTaskAssignedTo(int taskAssignedTo) {
+	public void setTaskAssignedTo(Integer taskAssignedTo) {
 		this.taskAssignedTo = taskAssignedTo;
 	}
 
-	public int getTaskStatus() {
+	public Integer getTaskStatus() {
 		return taskStatus;
 	}
 
-	public void setTaskStatus(int taskStatus) {
+	public void setTaskStatus(Integer taskStatus) {
 		this.taskStatus = taskStatus;
 	}
 

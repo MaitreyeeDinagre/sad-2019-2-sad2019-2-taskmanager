@@ -23,10 +23,10 @@ public class Issue {
 	private Integer issueId;
 
 	@Column(name="issuename")
-	private Integer issueName;
+	private String issueName;
 
 	@Column(name="issuedescription")
-	private Integer issueDescription;
+	private String issueDescription;
 
 	@Column(name="issuestory", insertable=false, updatable=false)
 	private Integer issueStory;
@@ -52,22 +52,22 @@ public class Issue {
 	}
 
 
-	public Integer getIssueName() {
+	public String getIssueName() {
 		return issueName;
 	}
 
 
-	public void setIssueName(Integer issueName) {
+	public void setIssueName(String issueName) {
 		this.issueName = issueName;
 	}
 
 
-	public Integer getIssueDescription() {
+	public String getIssueDescription() {
 		return issueDescription;
 	}
 
 
-	public void setIssueDescription(Integer issueDescription) {
+	public void setIssueDescription(String issueDescription) {
 		this.issueDescription = issueDescription;
 	}
 

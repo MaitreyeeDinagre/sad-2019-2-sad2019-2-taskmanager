@@ -23,7 +23,7 @@ public class EmployeeProfile {
 	private String employeeProfileName;
 	
 	@Column(name="employeeprofiledescription")
-	private Integer employeeProfileDescription;
+	private String employeeProfileDescription;
 
 	public Integer getEmployeeProfileId() {
 		return employeeProfileId;
@@ -33,7 +33,7 @@ public class EmployeeProfile {
 		return employeeProfileName;
 	}
 
-	public Integer getEmployeeProfileDescription() {
+	public String getEmployeeProfileDescription() {
 		return employeeProfileDescription;
 	}
 
@@ -45,7 +45,7 @@ public class EmployeeProfile {
 		this.employeeProfileName = employeeProfileName;
 	}
 
-	public void setEmployeeProfileDescription(Integer employeeProfileDescription) {
+	public void setEmployeeProfileDescription(String employeeProfileDescription) {
 		this.employeeProfileDescription = employeeProfileDescription;
 	}
 
