@@ -19,10 +19,10 @@ public class Status {
 	private Integer statusId;
 	
 	@Column(name="statusname")
-	private Integer statusName;
+	private String statusName;
 	
 	@Column(name="statusdescription")
-	private Integer statusDescription;
+	private String statusDescription;
 
 	public Integer getStatusId() {
 		return statusId;
@@ -32,19 +32,19 @@ public class Status {
 		this.statusId = statusId;
 	}
 
-	public Integer getStatusName() {
+	public String getStatusName() {
 		return statusName;
 	}
 
-	public void setStatusName(Integer statusName) {
+	public void setStatusName(String statusName) {
 		this.statusName = statusName;
 	}
 
-	public Integer getStatusDescription() {
+	public String getStatusDescription() {
 		return statusDescription;
 	}
 
-	public void setStatusDescription(Integer statusDescription) {
+	public void setStatusDescription(String statusDescription) {
 		this.statusDescription = statusDescription;
 	}
 

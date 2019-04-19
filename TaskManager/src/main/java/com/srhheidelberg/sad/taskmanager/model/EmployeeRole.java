@@ -20,10 +20,10 @@ public class EmployeeRole {
 	private Integer employeeroleId;
 	
 	@Column(name="employeerolename")
-	private Integer employeeroleName;
+	private String employeeroleName;
 	
 	@Column(name="employeeroledescription")
-	private Integer employeeroleDescription;
+	private String employeeroleDescription;
 
 	public Integer getEmployeeroleId() {
 		return employeeroleId;
@@ -33,19 +33,19 @@ public class EmployeeRole {
 		this.employeeroleId = employeeroleId;
 	}
 
-	public Integer getEmployeeroleName() {
+	public String getEmployeeroleName() {
 		return employeeroleName;
 	}
 
-	public void setEmployeeroleName(Integer employeeroleName) {
+	public void setEmployeeroleName(String employeeroleName) {
 		this.employeeroleName = employeeroleName;
 	}
 
-	public Integer getEmployeeroleDescription() {
+	public String getEmployeeroleDescription() {
 		return employeeroleDescription;
 	}
 
-	public void setEmployeeroleDescription(Integer employeeroleDescription) {
+	public void setEmployeeroleDescription(String employeeroleDescription) {
 		this.employeeroleDescription = employeeroleDescription;
 	}
 
