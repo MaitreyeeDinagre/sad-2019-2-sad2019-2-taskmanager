@@ -2,11 +2,16 @@ package com.srhheidelberg.sad.taskmanager.enumRepository;
 
 public enum TaskType {
 	
-	TaskType1,
-	TaskType2,
-	TaskType3,
-	TaskType4,
-	TaskType5;
+	Design,
+	Development,
+	UnitTesting,
+	Review,
+	Deployment,
+	QualityAnalysis,
+	SmokeTesting,
+	IntegrationTesting,
+	DataMigration,
+	Release;
 	
 	int value;
     public int getValue() {

@@ -164,3 +164,40 @@ CREATE TABLE `storytask` (
   CONSTRAINT `storytaskstory_fk` FOREIGN KEY (`storytaskstory`) REFERENCES `story` (`storyid`),
   CONSTRAINT `storytasktask_fk` FOREIGN KEY (`storytasktask`) REFERENCES `task` (`taskid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+/* **************************Inserting Prepopulated Values**************************** */
+
+/* Inserting Initiative Values */
+INSERT INTO `taskmanager`.`initiative` (`initiativeid`, `initiativename`, `initiativedescription`) VALUES ('1', 'Initiative1', 'Project #1');
+INSERT INTO `taskmanager`.`initiative` (`initiativeid`, `initiativename`, `initiativedescription`) VALUES ('2', 'Initiative2', 'Project #2');
+INSERT INTO `taskmanager`.`initiative` (`initiativeid`, `initiativename`, `initiativedescription`) VALUES ('3', 'Initiative3', 'Project #3');
+
+/* Inserting Employee Profile Values */
+INSERT INTO `taskmanager`.`employeeprofile` (`employeeprofileid`, `employeeprofilename`, `employeeprofiledescription`) VALUES ('1', 'Senior Consultant', 'Architects and Managers');
+INSERT INTO `taskmanager`.`employeeprofile` (`employeeprofileid`, `employeeprofilename`, `employeeprofiledescription`) VALUES ('2', 'Junior Consultant', 'Developers and Testers');
+
+/* Inserting Employee Role Values */
+INSERT INTO `taskmanager`.`employeerole` (`employeeroleid`, `employeerolename`, `employeeroledescription`) VALUES ('1', 'Manager', 'Manager');
+INSERT INTO `taskmanager`.`employeerole` (`employeeroleid`, `employeerolename`, `employeeroledescription`) VALUES ('2', 'Consultant', 'Consultant');
+INSERT INTO `taskmanager`.`employeerole` (`employeeroleid`, `employeerolename`, `employeeroledescription`) VALUES ('3', 'Developer', 'Developer');
+INSERT INTO `taskmanager`.`employeerole` (`employeeroleid`, `employeerolename`, `employeeroledescription`) VALUES ('4', 'Tester', 'Tester');
+INSERT INTO `taskmanager`.`employeerole` (`employeeroleid`, `employeerolename`, `employeeroledescription`) VALUES ('5', 'Architect', 'Architect');
+
+/* Inserting Status Values */
+INSERT INTO `taskmanager`.`status` (`statusid`, `statusname`, `statusdescription`) VALUES ('1', 'Started', 'Started Process');
+INSERT INTO `taskmanager`.`status` (`statusid`, `statusname`, `statusdescription`) VALUES ('2', 'InProgress', 'Process in Progress');
+INSERT INTO `taskmanager`.`status` (`statusid`, `statusname`, `statusdescription`) VALUES ('3', 'Completed', 'Process Completed');
+INSERT INTO `taskmanager`.`status` (`statusid`, `statusname`, `statusdescription`) VALUES ('4', 'Rejected', 'Process Rejected');
+INSERT INTO `taskmanager`.`status` (`statusid`, `statusname`, `statusdescription`) VALUES ('5', 'NotStarted', 'Process Not Started Yet');
+
+/* Inserting Initiative Values */
+INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('1', 'Design', 'Design Phase for Development');
+INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('2', 'Development', 'Development Phase for the Task or Process');
+INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('3', 'UnitTesting', 'Unit Testing for the Developed Component');
+INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('4', 'Review', 'Review Phase Includes: Development Review, Testing Review and Design Review');
+INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('5', 'Deployment', 'Deployment into different Environments and Orgs');
+INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('6', 'QualityAnalysis', 'Quality Analysis of Development, Testing and Deployment');
+INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('7', 'SmokeTesting', 'Testing the Deployed Components in the Target Environment');
+INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('8', 'IntegrationTesting', 'Testing the Integration of Multiple Deployments');
+INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('9', 'DataMigration', 'Movement of Data from Source Environment to Target Orgs');
+INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('10', 'Release', 'Release of Inititive or Product');

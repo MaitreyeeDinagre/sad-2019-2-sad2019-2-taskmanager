@@ -22,10 +22,10 @@ public class Employee {
 	private Integer employeeId;
 	
 	@Column(name="employeename")
-	private Integer employeeName;
+	private String employeeName;
 	
 	@Column(name="employeedetails")
-	private Integer employeeDetails;
+	private String employeeDetails;
 	
 	@Column(name="employeeprofile", insertable=false, updatable=false)
 	private Integer employeeProfile;
@@ -56,19 +56,19 @@ public class Employee {
 		this.employeeId = employeeId;
 	}
 
-	public Integer getEmployeeName() {
+	public String getEmployeeName() {
 		return employeeName;
 	}
 
-	public void setEmployeeName(Integer employeeName) {
+	public void setEmployeeName(String employeeName) {
 		this.employeeName = employeeName;
 	}
 
-	public Integer getEmployeeDetails() {
+	public String getEmployeeDetails() {
 		return employeeDetails;
 	}
 
-	public void setEmployeeDetails(Integer employeeDetails) {
+	public void setEmployeeDetails(String employeeDetails) {
 		this.employeeDetails = employeeDetails;
 	}
 

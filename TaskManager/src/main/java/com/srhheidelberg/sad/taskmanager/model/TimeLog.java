@@ -30,17 +30,14 @@ public class TimeLog {
 	@Column(name="timelogduration")
 	private Integer timeLogDuration;
 	
-	
 	@Column(name="timelogstory", insertable=false, updatable=false)
 	private Integer timeLogStory;
 	
 	@Column(name="timelogtask", insertable=false, updatable=false)
 	private Integer timeLogTask;
 	
-	
 	@Column(name="timelogemployee", insertable=false, updatable=false)
 	private Integer timeLogEmployee;
-
 	
 	@OneToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="timelogstory")
@@ -58,7 +55,6 @@ public class TimeLog {
 		return timeLogId;
 	}
 
-
 	public void setTimeLogId(Integer timeLogId) {
 		this.timeLogId = timeLogId;
 	}
@@ -73,11 +69,9 @@ public class TimeLog {
 		this.timeLogDescription = timeLogDescription;
 	}
 
-
 	public String getTimeLogAudit() {
 		return timeLogAudit;
 	}
-
 
 	public void setTimeLogAudit(String timeLogAudit) {
 		this.timeLogAudit = timeLogAudit;
@@ -88,71 +82,57 @@ public class TimeLog {
 		return timeLogDuration;
 	}
 
-
 	public void setTimeLogDuration(Integer timeLogDuration) {
 		this.timeLogDuration = timeLogDuration;
 	}
-
 
 	public Integer getTimeLogStory() {
 		return timeLogStory;
 	}
 
-
 	public void setTimeLogStory(Integer timeLogStory) {
 		this.timeLogStory = timeLogStory;
 	}
-
 
 	public Integer getTimeLogTask() {
 		return timeLogTask;
 	}
 
-
 	public void setTimeLogTask(Integer timeLogTask) {
 		this.timeLogTask = timeLogTask;
 	}
-
 
 	public Integer getTimeLogEmployee() {
 		return timeLogEmployee;
 	}
 
-
 	public void setTimeLogEmployee(Integer timeLogEmployee) {
 		this.timeLogEmployee = timeLogEmployee;
 	}
-
 
 	public Story getStory() {
 		return story;
 	}
 
-
 	public void setStory(Story story) {
 		this.story = story;
 	}
-
 
 	public Task getTask() {
 		return task;
 	}
 
-
 	public void setTask(Task task) {
 		this.task = task;
 	}
-
 
 	public Employee getEmployee() {
 		return employee;
 	}
 
-
 	public void setEmployee(Employee employee) {
 		this.employee = employee;
 	}
-
 
 	@Override
 	public String toString() {
@@ -161,6 +141,4 @@ public class TimeLog {
 				+ ", timeLogTask=" + timeLogTask + ", timeLogEmployee=" + timeLogEmployee + ", story=" + story
 				+ ", task=" + task + ", employee=" + employee + "]";
 	}
-
-
 }

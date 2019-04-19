@@ -23,10 +23,10 @@ public class Epic {
 	private Integer epicId;
 	
 	@Column(name="epicname")
-	private Integer epicName;
+	private String epicName;
 	
 	@Column(name="epicdescription")
-	private Integer epicDescription;
+	private String epicDescription;
 	
 	@Column(name="epicinitiative", insertable=false, updatable=false)
 	private Integer epicInitiative;
@@ -43,19 +43,19 @@ public class Epic {
 		this.epicId = epicId;
 	}
 
-	public Integer getEpicName() {
+	public String getEpicName() {
 		return epicName;
 	}
 
-	public void setEpicName(Integer epicName) {
+	public void setEpicName(String epicName) {
 		this.epicName = epicName;
 	}
 
-	public Integer getEpicDescription() {
+	public String getEpicDescription() {
 		return epicDescription;
 	}
 
-	public void setEpicDescription(Integer epicDescription) {
+	public void setEpicDescription(String epicDescription) {
 		this.epicDescription = epicDescription;
 	}
 
