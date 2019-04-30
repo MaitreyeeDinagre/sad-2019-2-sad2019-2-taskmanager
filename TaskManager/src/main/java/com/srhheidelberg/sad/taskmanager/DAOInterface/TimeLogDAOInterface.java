@@ -15,5 +15,7 @@ public interface TimeLogDAOInterface {
 	void deleteTimeLog(Integer timelogId);
 	
 	void deleteAllTimeLog(List<TimeLog> timelog);
+	
+	TimeLog updateTimeLog(TimeLog timelog);
 
 }

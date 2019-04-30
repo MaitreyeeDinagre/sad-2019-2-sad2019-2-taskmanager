@@ -33,6 +33,11 @@ public class TimeLogDAOImpl implements TimeLogDAOInterface{
 	
 	public void deleteAllTimeLog(List<TimeLog> timelog) {
 		timelogJPARepository.deleteAll(timelog);
-	}	
+	}
+	
+	@Override
+	public TimeLog updateTimeLog(TimeLog timelog) {
+		return timelogJPARepository.save(timelog);
+}
 
 }

@@ -34,5 +34,11 @@ public class IssueDAOImpl implements IssueDAOInterface{
 	public void deleteAllIssue(List<Issue> issue) {
 		issueJPARepository.deleteAll(issue);
 	}	
+	
+	@Override
+	public Issue updateIssue(Issue issue) {
+		return issueJPARepository.save(issue);
+	
 
+}
 }

@@ -35,4 +35,8 @@ public class StoryTaskDAOImpl implements StoryTaskDAOInterface{
 		storytaskJPARepository.deleteAll(storytask);
 	}	
 
+	@Override
+	public StoryTask updateStoryTask(StoryTask storytask) {
+		return storytaskJPARepository.save(storytask);
+}
 }

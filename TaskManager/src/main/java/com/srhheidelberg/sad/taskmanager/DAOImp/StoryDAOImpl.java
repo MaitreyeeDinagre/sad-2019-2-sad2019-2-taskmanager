@@ -33,6 +33,13 @@ public class StoryDAOImpl implements StoryDAOInterface{
 	
 	public void deleteAllStory(List<Story> story) {
 		storyJPARepository.deleteAll(story);
-	}	
+	}
+
+	@Override
+	public Story updateStory(Story story) {
+		return storyJPARepository.save(story);
+	}
+	
+	
 
 }

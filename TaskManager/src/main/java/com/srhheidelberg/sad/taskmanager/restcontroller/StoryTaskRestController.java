@@ -7,6 +7,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -44,5 +45,11 @@ public class StoryTaskRestController {
 	public List<StoryTask> deleteAllStoryTask() {
 		return storytaskDAOInterface.getAllStoryTask();
 	}
+	
+	@PutMapping("/")
+	public StoryTask updateStoryTask(StoryTask storytask) {
+		return updateStoryTask(storytask);
+	}
+
 
 }

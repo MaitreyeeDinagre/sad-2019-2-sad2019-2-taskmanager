@@ -7,11 +7,13 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.srhheidelberg.sad.taskmanager.DAOInterface.IssueDAOInterface;
 import com.srhheidelberg.sad.taskmanager.model.Issue;
+
 
 @RestController
 @RequestMapping("/issue")
@@ -44,5 +46,13 @@ public class IssueRestController {
 	public List<Issue> deleteAllIssue() {
 		return issueDAOInterface.getAllIssue();
 	}
+	
+	@PutMapping("/")
+	public Issue updateIssue(Issue issue) {
+		return updateIssue(issue);
+	}	
 
 }
+
+
+

@@ -16,4 +16,6 @@ public interface StoryTaskDAOInterface {
 	
 	void deleteAllStoryTask(List<StoryTask> storytask);
 
+	StoryTask updateStoryTask(StoryTask storytask);
+
 }

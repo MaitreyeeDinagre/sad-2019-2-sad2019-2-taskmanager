@@ -7,6 +7,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -43,6 +44,13 @@ public class TimeLogRestController {
 	@GetMapping("/deletealltimelog")
 	public List<TimeLog> deleteAllTimeLog() {
 		return timelogDAOInterface.getAllTimeLog();
+		
 	}
+	
+	@PutMapping("/")
+	public TimeLog updateTimeLog(TimeLog timelog) {
+		return updateTimeLog(timelog);
+	}
+
 
 }

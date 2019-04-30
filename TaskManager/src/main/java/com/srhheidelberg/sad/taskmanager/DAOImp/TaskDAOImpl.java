@@ -34,5 +34,10 @@ public class TaskDAOImpl implements TaskDAOInterface{
 	public void deleteAllTask(List<Task> task) {
 		taskJPARepository.deleteAll(task);
 	}
+	
+	@Override
+	public Task updateTask(Task task) {
+		return taskJPARepository.save(task);
+}
 
 }

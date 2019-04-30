@@ -16,4 +16,6 @@ public interface IssueDAOInterface {
 	
 	void deleteAllIssue(List<Issue> issue);
 
+	Issue updateIssue(Issue issue);
+
 }

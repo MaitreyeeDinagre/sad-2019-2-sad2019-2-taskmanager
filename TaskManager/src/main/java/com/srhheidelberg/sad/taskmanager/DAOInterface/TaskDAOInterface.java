@@ -15,5 +15,7 @@ public interface TaskDAOInterface {
     void deleteTask(Integer taskId);
 	
 	void deleteAllTask(List<Task> task);
+	
+	Task updateTask(Task task);
 
 }

@@ -15,5 +15,7 @@ public interface StoryDAOInterface {
 	void deleteStory(Integer storyId);
 	
 	void deleteAllStory(List<Story> story);
+	
+	Story updateStory(Story story);
 
 }
