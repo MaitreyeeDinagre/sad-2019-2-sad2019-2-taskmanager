@@ -1,0 +1,21 @@
+<div class="header">
+    <a href="#default" class="logo">Task Manager</a>
+    <div class="header-right">
+      <button (click)="homeClicked()">Home</button>
+      <button (click)="contactClicked()">Contact</button>
+      <button (click)="accountClicked()">Account</button>
+    </div>
+  </div>
+  
+  <div style="padding-left:20px" *ngIf = "isHome">
+    <h3>Home</h3>
+    <p>Home Information dumped</p>
+  </div>
+  <div style="padding-left:20px" *ngIf = "isContact">
+      <h3>Contact</h3>
+      <p>Contact Datails (Developer API)</p>
+  </div>
+  <div style="padding-left:20px" *ngIf = "isAccount">
+      <h3>Account</h3>
+      <p>Account Profile</p>
+  </div>
