@@ -1,3 +1,19 @@
-<app-footerbasic></app-footerbasic>
-<app-headerbasic></app-headerbasic>
-<app-employeelist></app-employeelist>
+<div>
+
+    <table>
+        <tr *ngIf="loggedOut">
+            Username: <input><br/>
+            Password: <input type="password"><br/>
+            <button (click)="loginUser()">Login</button>
+        </tr>
+        <tr  *ngIf="loggedIn">
+            <td>
+                <app-headerbasic></app-headerbasic>
+            </td>
+        </tr>
+        <tr  *ngIf="loggedIn">
+            <button (click)="logoutUser()">Logout</button>
+            <app-footerbasic></app-footerbasic>
+        </tr>
+    </table>
+</div>
