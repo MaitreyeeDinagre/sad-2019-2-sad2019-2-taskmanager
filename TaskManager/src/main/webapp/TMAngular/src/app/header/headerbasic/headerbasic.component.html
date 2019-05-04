@@ -2,20 +2,30 @@
     <a href="#default" class="logo">Task Manager</a>
     <div class="header-right">
       <button (click)="homeClicked()">Home</button>
-      <button (click)="contactClicked()">Contact</button>
-      <button (click)="accountClicked()">Account</button>
+      <button (click)="contactClicked()">Get Employee List Sample</button>
+      <button (click)="accountClicked()">Graph</button>
+      <button (click)="showProfile()">Get 1 Employee Sample</button>
     </div>
   </div>
-  
+  <div style="padding-left:20px" *ngIf = "isProfile">
+      <h3>Profile (Single Employee GET)</h3>
+      <p>{{ EmployeeDetails?.employeeName }}</p>
+      <p>{{ EmployeeDetails?.employeeDetails }}</p>
+    </div>
   <div style="padding-left:20px" *ngIf = "isHome">
     <h3>Home</h3>
     <p>Home Information dumped</p>
   </div>
   <div style="padding-left:20px" *ngIf = "isContact">
-      <h3>Contact</h3>
-      <p>Contact Datails (Developer API)</p>
+      <h3>Contact List (List Employee GET)</h3>
+      <div *ngFor="let employee of EmployeeList" >
+          <a href="#">{{ employee.employeeName }}</a><br/>
+          employee initiative: {{ employee.initiative.initiativeName }}<br/>
+          employee profile: {{ employee.profile.employeeProfileName }}<br/>
+          employee role: {{ employee.role.employeeRoleName }}<br/>
+      </div>
   </div>
   <div style="padding-left:20px" *ngIf = "isAccount">
-      <h3>Account</h3>
-      <p>Account Profile</p>
+      <h3>Graph</h3>
+      <p>Graphs</p>
   </div>

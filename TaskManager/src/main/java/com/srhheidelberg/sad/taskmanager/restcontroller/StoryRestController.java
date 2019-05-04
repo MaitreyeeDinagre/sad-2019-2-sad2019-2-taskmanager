@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,26 +23,31 @@ public class StoryRestController {
 	StoryDAOInterface storyDAOInterface;
 	
 	@PostMapping("/")
+	@CrossOrigin(origins = "http://localhost:4200")
 	public Story createStory(Story story) {
 		return storyDAOInterface.createStory(story);
 	}
 	
 	@GetMapping("/{storyId}")
+	@CrossOrigin(origins = "http://localhost:4200")
 	public Story getStory(ModelMap modelMap, @PathVariable Integer storyId) {
 		return storyDAOInterface.getStory(storyId);
 	}
 	
 	@GetMapping("/")
+	@CrossOrigin(origins = "http://localhost:4200")
 	public List<Story> getAllStory() {
 		return storyDAOInterface.getAllStory();
 	}
 	
 	@GetMapping("/{deletestoryId}")
+	@CrossOrigin(origins = "http://localhost:4200")
 	public Story deleteStory(ModelMap modelMap, @PathVariable Integer storyId) {
 		return storyDAOInterface.getStory(storyId);
 	}
 	
 	@GetMapping("/deleteallstory")
+	@CrossOrigin(origins = "http://localhost:4200")
 	public List<Story> deleteAllStory() {
 		return storyDAOInterface.getAllStory();
 	}

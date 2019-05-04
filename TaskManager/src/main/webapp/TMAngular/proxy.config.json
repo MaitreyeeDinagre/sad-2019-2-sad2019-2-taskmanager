@@ -1,0 +1,8 @@
+{
+    "/proxyapi/*": {
+        "target" : "http://localhost:8888",
+        "secure" : false,
+        "changeOrigin" : true,
+        "loglevel" : "debug"
+    }
+}

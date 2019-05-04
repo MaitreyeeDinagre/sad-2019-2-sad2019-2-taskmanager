@@ -11,6 +11,7 @@ import { LoginModule } from './login/login.module';
 import { ManagerviewModule } from './managerview/managerview.module';
 import { CommonviewModule } from './commonview/commonview.module';
 import { TasklogModule } from './tasklog/tasklog.module';
+import { EmployeeserviceService } from './employeeservice.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { TasklogModule } from './tasklog/tasklog.module';
     CommonviewModule,
     TasklogModule
   ],
-  providers: [],
+  providers: [EmployeeserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
