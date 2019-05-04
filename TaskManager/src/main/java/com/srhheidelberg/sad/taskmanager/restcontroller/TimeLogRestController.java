@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,32 +23,38 @@ public class TimeLogRestController {
 	TimeLogDAOInterface timelogDAOInterface;
 	
 	@PostMapping("/")
+	@CrossOrigin(origins = "http://localhost:4200")
 	public TimeLog createTimeLog(TimeLog timelog) {
 		return timelogDAOInterface.createTimeLog(timelog);
 	}
 	
 	@GetMapping("/{timelogId}")
+	@CrossOrigin(origins = "http://localhost:4200")
 	public TimeLog getTimeLog(ModelMap modelMap, @PathVariable Integer timelogId) {
 		return timelogDAOInterface.getTimeLog(timelogId);
 	}
 	
 	@GetMapping("/")
+	@CrossOrigin(origins = "http://localhost:4200")
 	public List<TimeLog> getAllTimeLog() {
 		return timelogDAOInterface.getAllTimeLog();
 	}
 	
 	@GetMapping("/{deletetimelogId}")
+	@CrossOrigin(origins = "http://localhost:4200")
 	public TimeLog deleteTimeLog(ModelMap modelMap, @PathVariable Integer timelogId) {
 		return timelogDAOInterface.getTimeLog(timelogId);
 	}
 	
 	@GetMapping("/deletealltimelog")
+	@CrossOrigin(origins = "http://localhost:4200")
 	public List<TimeLog> deleteAllTimeLog() {
 		return timelogDAOInterface.getAllTimeLog();
 		
 	}
 	
 	@PutMapping("/")
+	@CrossOrigin(origins = "http://localhost:4200")
 	public TimeLog updateTimeLog(TimeLog timelog) {
 		return updateTimeLog(timelog);
 	}
