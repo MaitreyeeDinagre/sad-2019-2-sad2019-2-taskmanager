@@ -16,7 +16,7 @@ import com.srhheidelberg.sad.taskmanager.model.EpicStoryTask;
 
 @RestController
 @RequestMapping("/epicstorytask")
-public class EpicStoryTaskRestController {
+public class EpicsStoryTaskRestController {
 	
 	@Autowired
 	EpicStoryTaskDAOInterface epicstorytaskDAOInterface;
