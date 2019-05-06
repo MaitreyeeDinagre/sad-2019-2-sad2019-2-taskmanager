@@ -36,14 +36,14 @@ public class StoryRestController {
 		return storyDAOInterface.getAllStory();
 	}
 	
-	@GetMapping("/{deletestoryId}")
-	public Story deleteStory(ModelMap modelMap, @PathVariable Integer storyId) {
-		return storyDAOInterface.getStory(storyId);
+	@GetMapping("/deleteone/{storyId}")
+	public void deleteStory(ModelMap modelMap, @PathVariable Integer storyId) {
+		storyDAOInterface.deleteStory(storyId);
 	}
 	
-	@GetMapping("/deleteallstory")
-	public List<Story> deleteAllStory() {
-		return storyDAOInterface.getAllStory();
+	@GetMapping("/deleteall")
+	public void deleteAllStory(List<Story> story) {
+		storyDAOInterface.deleteAllStory(story);
 	}
 	
 	@PutMapping("/")

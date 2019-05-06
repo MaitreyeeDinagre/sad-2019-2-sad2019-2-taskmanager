@@ -26,7 +26,5 @@ public class EmployeeDAOImpl implements EmployeeDAOInterface{
 	public Employee createEmployee(Employee employee) {
 		return employeeJPARepository.save(employee);
 	}
-
 	
-
 }

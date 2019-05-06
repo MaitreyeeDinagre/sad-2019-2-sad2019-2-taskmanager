@@ -36,14 +36,14 @@ public class TaskRestController {
 		return taskDAOInterface.getAllTask();
 	}
 	
-	@GetMapping("/{deletetaskId}")
-	public Task deleteTask(ModelMap modelMap, @PathVariable Integer taskId) {
-		return taskDAOInterface.getTask(taskId);
+	@GetMapping("/deleteone/{taskId}")
+	public void deleteTask(ModelMap modelMap, @PathVariable Integer taskId) {
+		taskDAOInterface.deleteTask(taskId);
 	}
 	
-	@GetMapping("/deletealltask")
-	public List<Task> deleteAllTask() {
-		return taskDAOInterface.getAllTask();
+	@GetMapping("/deleteall")
+	public void deleteAllTask(List<Task> task) {
+		taskDAOInterface.deleteAllTask(task);
 	}
 	@PutMapping("/")
 	public Task updateTask(Task task) {

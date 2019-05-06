@@ -6,5 +6,6 @@ import com.srhheidelberg.sad.taskmanager.model.Employee;
 
 
 public interface EmployeeJPARepository extends JpaRepository<Employee, Integer>{
+	
 
 }

@@ -36,14 +36,14 @@ public class TimeLogRestController {
 		return timelogDAOInterface.getAllTimeLog();
 	}
 	
-	@GetMapping("/{deletetimelogId}")
-	public TimeLog deleteTimeLog(ModelMap modelMap, @PathVariable Integer timelogId) {
-		return timelogDAOInterface.getTimeLog(timelogId);
+	@GetMapping("/deleteone/{timelogId}")
+	public void deleteTimeLog(ModelMap modelMap, @PathVariable Integer timelogId) {
+		timelogDAOInterface.deleteTimeLog(timelogId);
 	}
 	
-	@GetMapping("/deletealltimelog")
-	public List<TimeLog> deleteAllTimeLog() {
-		return timelogDAOInterface.getAllTimeLog();
+	@GetMapping("/deleteall")
+	public void deleteAllTimeLog(List<TimeLog> timelog) {
+		timelogDAOInterface.deleteAllTimeLog(timelog);
 		
 	}
 	

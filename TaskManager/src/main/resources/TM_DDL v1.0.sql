@@ -154,16 +154,22 @@ CREATE TABLE `timelog` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `storytask`;
-CREATE TABLE `storytask` (
-  `storytaskid` int(11) NOT NULL AUTO_INCREMENT,
-  `storytaskstory` int(11) NOT NULL,
-  `storytasktask` int(11) NOT NULL,
-  PRIMARY KEY (`storytaskid`),
-  KEY `storytaskstory_fk_idx` (`storytaskstory`),
-  KEY `storytasktask_fk_idx` (`storytasktask`),
-  CONSTRAINT `storytaskstory_fk` FOREIGN KEY (`storytaskstory`) REFERENCES `story` (`storyid`),
-  CONSTRAINT `storytasktask_fk` FOREIGN KEY (`storytasktask`) REFERENCES `task` (`taskid`)
+
+DROP TABLE IF EXISTS `epicstorytask`;
+CREATE TABLE `epicstorytask` (
+  `epicstorytaskid` int(11) NOT NULL AUTO_INCREMENT,
+  `epicstorytaskstory` int(11) NOT NULL,
+  `epicstorytasktask` int(11) NOT NULL,
+  `epicstorytaskepic` int(11) NOT NULL,
+  PRIMARY KEY (`epicstorytaskid`),
+  KEY `storytaskstory_fk_idx` (`epicstorytaskstory`),
+  KEY `storytasktask_fk_idx` (`epicstorytasktask`),
+  KEY `epicstorytaskepic_fk_idx` (`epicstorytaskepic`),
+  CONSTRAINT `epicstorytaskepic_fk` FOREIGN KEY (`epicstorytaskepic`) REFERENCES `epic` (`epicid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `epicstorytaskstory_fk` FOREIGN KEY (`epicstorytaskstory`) REFERENCES `story` (`storyid`),
+  CONSTRAINT `epicstorytasktask_fk` FOREIGN KEY (`epicstorytasktask`) REFERENCES `task` (`taskid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 /* **************************Inserting Prepopulated Values**************************** */
 
