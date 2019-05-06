@@ -15,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Entity
 @Table(name="storytask")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class StoryTask {
+public class EpicStoryTask {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	@Column(name="storytaskid")
