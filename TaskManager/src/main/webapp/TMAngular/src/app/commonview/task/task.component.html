@@ -2,7 +2,7 @@
   <ngb-panel id="custom-panel-1">
     <ng-template ngbPanelHeader let-opened="opened">
       <div class="d-flex align-items-center justify-content-between">
-        <h5 class="m-0">Epic</h5>
+        <h5 class="m-0">Task</h5>
         <button ngbPanelToggle class="btn btn-link p-0">&#9660;</button>
       </div>
     </ng-template>
@@ -16,13 +16,13 @@
             </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let epic of epics">
-              <td>{{epic.epicName}}</td>
+            <tr *ngFor="let task of tasks">
+              <td>{{task.taskName}}</td>
               <td></td>
               <td><ngb-accordion (panelChange)="beforeChange($event)">
                 <ngb-panel id="preventchange-1" title="View">
                   <ng-template ngbPanelContent>
-                    {{epic.epicDescription}}
+                    {{task.taskDescription}}
                   </ng-template>
                 </ngb-panel>
                 </ngb-accordion></td>

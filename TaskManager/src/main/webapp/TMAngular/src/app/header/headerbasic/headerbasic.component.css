@@ -9,6 +9,7 @@ body {
   overflow: hidden;
   background-color:blue;
   padding: 20px 10px;
+  width: 100%;
 }
 
 .header a {

@@ -41,16 +41,16 @@ public class IssueRestController {
 		return issueDAOInterface.getAllIssue();
 	}
 	
-	@GetMapping("/{deleteissueId}")
+	@GetMapping("/delete/{deleteissueId}")
 	@CrossOrigin(origins = "http://localhost:4200")
-	public Issue deleteIssue(ModelMap modelMap, @PathVariable Integer issueId) {
-		return issueDAOInterface.getIssue(issueId);
+	public void deleteIssue(ModelMap modelMap, @PathVariable Integer issueId) {
+		issueDAOInterface.deleteIssue(issueId);
 	}
 	
-	@GetMapping("/deleteallissue")
+	@GetMapping("/deleteall")
 	@CrossOrigin(origins = "http://localhost:4200")
-	public List<Issue> deleteAllIssue() {
-		return issueDAOInterface.getAllIssue();
+	public void deleteAllIssue(List<Issue> issue) {
+		issueDAOInterface.deleteAllIssue(issue);
 	}
 	
 	@PutMapping("/")

@@ -1,3 +1,24 @@
-<p>
-  story works!
-</p>
+<ngb-accordion #a="ngbAccordion" activeIds="custom-panel-1">
+  <ngb-panel id="custom-panel-1">
+    <ng-template ngbPanelHeader let-closed="closed">
+      <div class="d-flex align-items-center justify-content-between">
+        <h5 class="m-0">Story</h5>
+        <button ngbPanelToggle class="btn btn-link p-0">&#9660;</button>
+      </div>
+    </ng-template>
+    <ng-template ngbPanelContent>
+        <table class="table table-striped" border="2">
+            <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let story of stories">
+              <td>{{story.storyName}}</td>
+              <td>{{story.storyDescription}}</td>
+            </tr>
+            </tbody>
+          </table>
+    </ng-template>
