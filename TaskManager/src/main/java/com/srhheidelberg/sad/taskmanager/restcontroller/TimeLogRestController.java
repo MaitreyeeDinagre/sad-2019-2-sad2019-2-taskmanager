@@ -40,17 +40,16 @@ public class TimeLogRestController {
 		return timelogDAOInterface.getAllTimeLog();
 	}
 	
-	@GetMapping("/{deletetimelogId}")
+	@GetMapping("/delete/{deletetimelogId}")
 	@CrossOrigin(origins = "http://localhost:4200")
-	public TimeLog deleteTimeLog(ModelMap modelMap, @PathVariable Integer timelogId) {
-		return timelogDAOInterface.getTimeLog(timelogId);
+	public void deleteTimeLog(ModelMap modelMap, @PathVariable Integer timelogId) {
+		timelogDAOInterface.deleteTimeLog(timelogId);
 	}
 	
-	@GetMapping("/deletealltimelog")
+	@GetMapping("/deleteall")
 	@CrossOrigin(origins = "http://localhost:4200")
-	public List<TimeLog> deleteAllTimeLog() {
-		return timelogDAOInterface.getAllTimeLog();
-		
+	public void deleteAllTimeLog(List<TimeLog> timelog) {
+		timelogDAOInterface.deleteAllTimeLog(timelog);	
 	}
 	
 	@PutMapping("/")

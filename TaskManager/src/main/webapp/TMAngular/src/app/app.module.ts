@@ -12,6 +12,11 @@ import { ManagerviewModule } from './managerview/managerview.module';
 import { CommonviewModule } from './commonview/commonview.module';
 import { TasklogModule } from './tasklog/tasklog.module';
 import { EmployeeserviceService } from './employeeservice.service';
+import { CookieService } from 'ngx-cookie-service/cookie-service/cookie.service';
+import { FormsModule } from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { EpicService } from './epic.service';
+import { StoryService } from './story.service';
 
 @NgModule({
   declarations: [
@@ -27,9 +32,11 @@ import { EmployeeserviceService } from './employeeservice.service';
     LoginModule,
     ManagerviewModule,
     CommonviewModule,
-    TasklogModule
+    TasklogModule,
+    FormsModule,
+    NgbModule.forRoot()
   ],
-  providers: [EmployeeserviceService],
+  providers: [EmployeeserviceService, CookieService, EpicService,StoryService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -40,16 +40,16 @@ public class StoryRestController {
 		return storyDAOInterface.getAllStory();
 	}
 	
-	@GetMapping("/{deletestoryId}")
+	@GetMapping("/delete/{deletestoryId}")
 	@CrossOrigin(origins = "http://localhost:4200")
-	public Story deleteStory(ModelMap modelMap, @PathVariable Integer storyId) {
-		return storyDAOInterface.getStory(storyId);
+	public void deleteStory(ModelMap modelMap, @PathVariable Integer storyId) {
+		storyDAOInterface.deleteStory(storyId);
 	}
 	
-	@GetMapping("/deleteallstory")
+	@GetMapping("/deleteall")
 	@CrossOrigin(origins = "http://localhost:4200")
-	public List<Story> deleteAllStory() {
-		return storyDAOInterface.getAllStory();
+	public void deleteAllStory(List<Story> story) {
+		storyDAOInterface.deleteAllStory(story);
 	}
 	
 	@PutMapping("/")

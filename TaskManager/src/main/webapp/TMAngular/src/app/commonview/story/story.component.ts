@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import {StoryService} from '../../story.service'
+import {HttpClient} from '@angular/common/http';
+import {story} from '../../story.model';
+import { Observable } from 'rxjs';
+import{FormsModule} from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-story',
@@ -7,9 +14,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoryComponent implements OnInit {
 
-  constructor() { }
+  stories: any;
+  story = new story();
+  constructor(private storyservice: StoryService , private httpclient : HttpClient) { }
+
+  getStory(){
+
+    this.httpclient
+  .get('http://localhost:8888/JIRA-lite/TaskManager/story/')
+  .subscribe( response => {
+    this.stories = response;
+    console.log(response);
+  });
+  }
 
   ngOnInit() {
+    this.getStory();
   }
 
 }
