@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,16 +22,19 @@ public class EpicRestController {
 	EpicDAOInterface epicDAOInterface;
 	
 	@PostMapping("/")
+	@CrossOrigin(origins = "http://localhost:4200")
 	public Epic createEpic(Epic epic) {
 		return epicDAOInterface.createEpic(epic);
 	}
 	
 	@GetMapping("/{epicId}")
+	@CrossOrigin(origins = "http://localhost:4200")
 	public Epic getEpic(ModelMap modelMap, @PathVariable Integer epicId) {
 		return epicDAOInterface.getEpic(epicId);
 	}
 	
 	@GetMapping("/")
+	@CrossOrigin(origins = "http://localhost:4200")
 	public List<Epic> getAllEpic() {
 		return epicDAOInterface.getAllEpic();
 	}
