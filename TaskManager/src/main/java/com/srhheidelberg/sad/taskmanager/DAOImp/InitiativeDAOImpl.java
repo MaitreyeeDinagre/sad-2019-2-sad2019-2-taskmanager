@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.srhheidelberg.sad.taskmanager.DAOInterface.EmployeeDAOInterface;
 import com.srhheidelberg.sad.taskmanager.DAOInterface.InitiativeDAOInterface;
+import com.srhheidelberg.sad.taskmanager.model.Employee;
 import com.srhheidelberg.sad.taskmanager.model.Initiative;
 import com.srhheidelberg.sad.taskmanager.repository.InitiativeJPARepository;
 
@@ -14,6 +16,8 @@ public class InitiativeDAOImpl implements InitiativeDAOInterface{
 	
 	@Autowired
 	InitiativeJPARepository initiativeJPARepository;
+	@Autowired
+	EmployeeDAOInterface employeeDAOInterface;
 
 	public List<Initiative> getAllInitiative() {
 		return initiativeJPARepository.findAll();

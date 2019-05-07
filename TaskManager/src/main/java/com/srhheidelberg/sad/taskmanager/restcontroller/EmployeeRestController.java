@@ -38,5 +38,11 @@ public class EmployeeRestController {
 	public List<Employee> getAllEmployee() {
 		return employeeDAOInterface.getAllEmployee();
 	}
+	
+	@GetMapping("/getemployeesunderinitiative")
+	@CrossOrigin(origins = "http://localhost:4200")
+	public List<Employee> employeesunderinitiative(Integer initiativeId){
+		return employeeDAOInterface.employeesunderinitiative(initiativeId);
+	}
 
 }

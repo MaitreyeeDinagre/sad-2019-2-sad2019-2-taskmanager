@@ -11,5 +11,7 @@ public interface EmployeeDAOInterface {
 	Employee getEmployee(Integer employeeId);
 	
 	Employee createEmployee(Employee employee);
+	
+	public List<Employee> employeesunderinitiative(Integer initiativeId);
 
 }

@@ -27,6 +27,8 @@ public class EmployeeDAOImpl implements EmployeeDAOInterface{
 		return employeeJPARepository.save(employee);
 	}
 
-	
+	public List<Employee> employeesunderinitiative(Integer initiativeId) {
+		return employeeJPARepository.getByEmployeeInitiative(initiativeId);
+	}
 
 }
