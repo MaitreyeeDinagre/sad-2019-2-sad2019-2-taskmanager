@@ -10,9 +10,10 @@ public interface EmployeeJPARepository extends JpaRepository<Employee, Integer>{
 	
 	List<Employee> getByEmployeeInitiative(Integer inititativeId);
 	
+	List<Employee> getByEmployeeEpic(Integer epicId);
 	
+	List<Employee> getByEmployeeStory(Integer storyId);
 	
-	
-	
+	List<Employee> getByEmployeeTask(Integer taskId);
 
 }

@@ -44,5 +44,23 @@ public class EmployeeRestController {
 	public List<Employee> employeesunderinitiative(Integer initiativeId){
 		return employeeDAOInterface.employeesunderinitiative(initiativeId);
 	}
+	
+	@GetMapping("/getemployeesunderepic")
+	@CrossOrigin(origins = "http://localhost:4200")
+	public List<Employee> employeesunderepic(Integer epicId){
+		return employeeDAOInterface.employeesunderepic(epicId);
+	}
+	
+	@GetMapping("/getemployeesunderstory")
+	@CrossOrigin(origins = "http://localhost:4200")
+	public List<Employee> employeesunderstory(Integer storyId){
+		return employeeDAOInterface.employeesunderstory(storyId);
+	}
+	
+	@GetMapping("/getemployeesundertask")
+	@CrossOrigin(origins = "http://localhost:4200")
+	public List<Employee> employeesundertask(Integer taskId){
+		return employeeDAOInterface.employeesundertask(taskId);
+	}
 
 }
