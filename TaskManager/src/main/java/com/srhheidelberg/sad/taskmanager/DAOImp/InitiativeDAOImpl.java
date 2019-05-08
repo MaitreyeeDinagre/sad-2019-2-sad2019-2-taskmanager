@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.srhheidelberg.sad.taskmanager.DAOInterface.EmployeeDAOInterface;
 import com.srhheidelberg.sad.taskmanager.DAOInterface.InitiativeDAOInterface;
-import com.srhheidelberg.sad.taskmanager.model.Employee;
 import com.srhheidelberg.sad.taskmanager.model.Initiative;
 import com.srhheidelberg.sad.taskmanager.repository.InitiativeJPARepository;
 

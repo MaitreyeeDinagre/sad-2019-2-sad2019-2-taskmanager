@@ -24,10 +24,11 @@ public class EmployeeDAOImpl implements EmployeeDAOInterface{
 	}
 
 	public Employee createEmployee(Employee employee) {
+		System.out.print("fffffffffffff" + employee);
 		return employeeJPARepository.save(employee);
 	}
 
-	public List<Employee> employeesunderinitiative(Integer initiativeId) {
+	/*public List<Employee> employeesunderinitiative(Integer initiativeId) {
 		return employeeJPARepository.getByEmployeeInitiative(initiativeId);
 	}
 	
@@ -41,6 +42,6 @@ public class EmployeeDAOImpl implements EmployeeDAOInterface{
 	
 	public List<Employee> employeesundertask(Integer taskId) {
 		return employeeJPARepository.getByEmployeeTask(taskId);
-	}
+	}*/
 
 }

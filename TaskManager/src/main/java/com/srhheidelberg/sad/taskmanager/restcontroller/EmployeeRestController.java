@@ -24,6 +24,7 @@ public class EmployeeRestController {
 	@PostMapping("/")
 	@CrossOrigin(origins = "http://localhost:4200")
 	public Employee createEmployee(Employee employee) {
+		System.out.println(employee);
 		return employeeDAOInterface.createEmployee(employee);
 	}
 	
@@ -39,7 +40,7 @@ public class EmployeeRestController {
 		return employeeDAOInterface.getAllEmployee();
 	}
 	
-	@GetMapping("/getemployeesunderinitiative")
+	/*@GetMapping("/getemployeesunderinitiative/{initiativeId}")
 	@CrossOrigin(origins = "http://localhost:4200")
 	public List<Employee> employeesunderinitiative(Integer initiativeId){
 		return employeeDAOInterface.employeesunderinitiative(initiativeId);
@@ -61,6 +62,6 @@ public class EmployeeRestController {
 	@CrossOrigin(origins = "http://localhost:4200")
 	public List<Employee> employeesundertask(Integer taskId){
 		return employeeDAOInterface.employeesundertask(taskId);
-	}
+	}*/
 
 }

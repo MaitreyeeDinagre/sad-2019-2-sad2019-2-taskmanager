@@ -7,14 +7,14 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  loggedIn : boolean = true;
+  /*loggedIn : boolean = true;
   loggedOut : boolean = !this.loggedIn;
-  cookieValue = 'UNKNOWN';
+  cookieValue = 'UNKNOWN';*/
   
   constructor(private cookieService : CookieService) { }
 
   ngOnInit() {
-    if(this.cookieService.get('Test')) {
+    /*if(this.cookieService.get('Test')) {
       alert("User Cookie Available");
       this.loggedIn = true;
       this.loggedOut = !this.loggedIn;
@@ -23,10 +23,10 @@ export class AppComponent {
       alert("User Cookie Unavailable");
       this.loggedIn = false;
       this.loggedOut = !this.loggedIn;
-    }
+    }*/
   }
   
-  logoutUser() {
+  /*logoutUser() {
     this.cookieService.deleteAll();
     alert("User Cookie Deleted");
     this.loggedIn = !this.loggedIn;
@@ -40,5 +40,5 @@ export class AppComponent {
     alert("User Cookie Created");
     //this.cookieValue = this.cookieService.get('Test');
     //cookieService.delete('test');
-  }
+  }*/
 }

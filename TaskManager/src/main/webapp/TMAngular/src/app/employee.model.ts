@@ -9,4 +9,7 @@ export class employee {
     employeerole : role;
     employeeprofile : profile;
     employeeinitiative : initiative;
+    employeeroleid : number;
+    employeeprofileid : number;
+    employeeinitiativeid : number;
 }

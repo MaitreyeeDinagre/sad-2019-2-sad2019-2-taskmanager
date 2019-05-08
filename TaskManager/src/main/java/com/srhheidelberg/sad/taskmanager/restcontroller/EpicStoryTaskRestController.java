@@ -28,7 +28,7 @@ public class EpicStoryTaskRestController {
 		return epicstorytaskDAOInterface.createEpicStoryTask(epicstorytask);
 	}
 	
-	@GetMapping("/{storytaskId}")
+	@GetMapping("/{epicstorytaskId}")
 	@CrossOrigin(origins = "http://localhost:4200")
 	public EpicStoryTask getEpicStoryTask(ModelMap modelMap, @PathVariable Integer epicstorytaskId) {
 		return epicstorytaskDAOInterface.getEpicStoryTask(epicstorytaskId);
@@ -40,7 +40,7 @@ public class EpicStoryTaskRestController {
 		return epicstorytaskDAOInterface.getAllEpicStoryTask();
 	}
 	
-	@GetMapping("/delete/{deletestorytaskId}")
+	@GetMapping("/delete/{epicstorytaskId}")
 	@CrossOrigin(origins = "http://localhost:4200")
 	public void deleteEpicStoryTask(ModelMap modelMap, @PathVariable Integer epicstorytaskId) {
 		epicstorytaskDAOInterface.deleteEpicStoryTask(epicstorytaskId);
@@ -58,5 +58,15 @@ public class EpicStoryTaskRestController {
 		return updateEpicStoryTask(epicstorytask);
 	}
 
-
+	/*@GetMapping("/getstorysunderepic")
+	@CrossOrigin(origins = "http://localhost:4200")
+	public List<EpicStoryTask> storysunderepic(Integer storyId){
+		return epicstorytaskDAOInterface.storysunderepic(storyId);
+	}
+	
+	@GetMapping("/gettasksunderstory")
+	@CrossOrigin(origins = "http://localhost:4200")
+	public List<EpicStoryTask> tasksunderstory(Integer taskId){
+		return epicstorytaskDAOInterface.tasksunderstory(taskId);
+	}*/
 }

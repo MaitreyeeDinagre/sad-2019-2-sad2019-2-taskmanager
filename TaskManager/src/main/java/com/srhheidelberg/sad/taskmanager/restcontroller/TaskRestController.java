@@ -40,7 +40,7 @@ public class TaskRestController {
 		return taskDAOInterface.getAllTask();
 	}
 	
-	@GetMapping("/delete/{deletetaskId}")
+	@GetMapping("/delete/{taskId}")
 	@CrossOrigin(origins = "http://localhost:4200")
 	public void deleteTask(ModelMap modelMap, @PathVariable Integer taskId) {
 		taskDAOInterface.deleteTask(taskId);

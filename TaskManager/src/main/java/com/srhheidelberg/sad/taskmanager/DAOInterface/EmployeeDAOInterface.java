@@ -12,12 +12,12 @@ public interface EmployeeDAOInterface {
 	
 	Employee createEmployee(Employee employee);
 	
-	List<Employee> employeesunderinitiative(Integer initiativeId);
+	//List<Employee> employeesunderinitiative(Integer initiativeId);
 	
-	List<Employee> employeesunderepic(Integer epicId);
+	//List<Employee> employeesunderepic(Integer epicId);
 	
-	List<Employee> employeesunderstory(Integer storyId);
+	//List<Employee> employeesunderstory(Integer storyId);
 	
-	List<Employee> employeesundertask(Integer taskId);
+	//List<Employee> employeesundertask(Integer taskId);
 
 }
