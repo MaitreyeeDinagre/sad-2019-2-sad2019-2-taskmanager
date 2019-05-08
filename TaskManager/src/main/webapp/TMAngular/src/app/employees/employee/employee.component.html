@@ -1,0 +1,37 @@
+<form #form="ngForm" >
+  <div class="form-group">
+    <label>Employee Name:</label>
+    <input name="employeename" [(ngModel)]="uploadForm.employeename" 
+    class="form-control" #employeename="ngModel" required>
+    <div class="validation-error" *ngIf="employeename.invalid && employeename.touched">Name is Required</div>
+  </div>
+  <div class="form-group">
+      <label>Employee Details:</label>
+      <input name="employeedetails" [(ngModel)]="uploadForm.employeedetails" 
+      class="form-control" #employeedetails="ngModel" required>
+      <div class="validation-error" *ngIf="employeedetails.invalid && employeedetails.touched">Details is Required</div>
+  </div>
+  <div class="form-row">
+      <div class="form-group col-md-4">
+          <label>Employee Role:</label>
+          <input name="employeeroleid" [(ngModel)]="uploadForm.employeeroleid" 
+          class="form-control" #employeeroleid="ngModel" type="number" required>
+          <div class="validation-error" *ngIf="employeeroleid.invalid && employeeroleid.touched">Role is Required</div>
+      </div>
+      <div class="form-group col-md-4">
+          <label>Employee Profile:</label>
+          <input name="employeeprofileid" [(ngModel)]="uploadForm.employeeprofileid" 
+          class="form-control" #employeeprofileid="ngModel" type="number" required>
+          <div class="validation-error" *ngIf="employeeprofileid.invalid && employeeprofileid.touched">Profile is Required</div>
+      </div>
+      <div class="form-group col-md-4">
+          <label>Employee Initiative:</label>
+          <input name="employeeinitiativeid" [(ngModel)]="uploadForm.employeeinitiativeid" 
+          class="form-control" #employeeinitiativeid="ngModel" type="number" required>
+          <div class="validation-error" *ngIf="employeeinitiativeid.invalid && employeeinitiativeid.touched">Initiative is Required</div>
+      </div>
+  </div>
+  
+  <button type="submit" class="btn btn-lg btn-block" (click)="submitForm()">Add Employee</button>
+  
+</form>

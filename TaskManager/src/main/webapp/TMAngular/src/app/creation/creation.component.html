@@ -1,0 +1,22 @@
+Epic Name: <input type="text" [formControl]="epicName"><br/>
+Epic Description: <input type="text" [formControl]="epicDescription"><br/>
+Epic Initiative: <input type="number" [formControl]="epicInitiative"><br/>
+<button (click)="createEpic()">Create Epic</button>
+<br/>
+<br/>
+Story Name: <input type="text" [formControl]="storyName"><br/>
+Story Estimated: <input type="number" [formControl]="storyEstimated"><br/>
+Story Actual: <input type="number" [formControl]="storyActual"><br/>
+Story Current: <input type="checkbox" [formControl]="storyIsCurrent"><br/>
+Story Assigned To: <input type="number" [formControl]="storyAssignedTo"><br/>
+Story Status: <input type="number" [formControl]="storyStatus"><br/> 
+<button (click)="createStory()">Create Story</button>
+<br/>
+<br/>
+Task Name: <input type="text" [formControl]="taskName"><br/>
+Task Estimated: <input type="number" [formControl]="taskEstimated"><br/>
+Task Actual: <input type="number" [formControl]="taskActual"><br/>
+Task Description: <input type="text" [formControl]="taskDescription"><br/>
+Task Assigned To: <input type="number" [formControl]="taskAssignedTo"><br/>
+Task Status: <input type="number" [formControl]="taskStatus"><br/> 
+<button (click)="createTask()">Create Task</button>

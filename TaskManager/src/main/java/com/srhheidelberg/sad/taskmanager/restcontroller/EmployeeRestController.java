@@ -24,6 +24,7 @@ public class EmployeeRestController {
 	@PostMapping("/")
 	@CrossOrigin(origins = "http://localhost:4200")
 	public Employee createEmployee(Employee employee) {
+		System.out.println(employee);
 		return employeeDAOInterface.createEmployee(employee);
 	}
 	
