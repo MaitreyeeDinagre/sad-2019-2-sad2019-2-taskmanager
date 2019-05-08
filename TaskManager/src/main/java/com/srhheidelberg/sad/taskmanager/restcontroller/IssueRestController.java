@@ -41,7 +41,7 @@ public class IssueRestController {
 		return issueDAOInterface.getAllIssue();
 	}
 	
-	@GetMapping("/delete/{deleteissueId}")
+	@GetMapping("/delete/{issueId}")
 	@CrossOrigin(origins = "http://localhost:4200")
 	public void deleteIssue(ModelMap modelMap, @PathVariable Integer issueId) {
 		issueDAOInterface.deleteIssue(issueId);
