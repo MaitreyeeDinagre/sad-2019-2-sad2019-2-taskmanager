@@ -28,6 +28,20 @@ public class EmployeeDAOImpl implements EmployeeDAOInterface{
 		return employeeJPARepository.save(employee);
 	}
 
+	/*public List<Employee> employeesunderinitiative(Integer initiativeId) {
+		return employeeJPARepository.getByEmployeeInitiative(initiativeId);
+	}
 	
+	public List<Employee> employeesunderepic(Integer epicId) {
+		return employeeJPARepository.getByEmployeeEpic(epicId);
+	}
+	
+	public List<Employee> employeesunderstory(Integer storyId) {
+		return employeeJPARepository.getByEmployeeStory(storyId);
+	}
+	
+	public List<Employee> employeesundertask(Integer taskId) {
+		return employeeJPARepository.getByEmployeeTask(taskId);
+	}*/
 
 }

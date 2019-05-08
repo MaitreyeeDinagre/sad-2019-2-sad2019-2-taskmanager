@@ -21,6 +21,7 @@ public class InitiativeRestController {
 	@Autowired
 	InitiativeDAOInterface initiativeDAOInterface;
 	
+	
 	@PostMapping("/")
 	@CrossOrigin(origins = "http://localhost:4200")
 	public Initiative createInitiative(Initiative initiative) {

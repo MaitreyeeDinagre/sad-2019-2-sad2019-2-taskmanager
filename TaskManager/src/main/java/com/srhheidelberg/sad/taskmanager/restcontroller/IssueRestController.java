@@ -54,11 +54,11 @@ public class IssueRestController {
 		issueDAOInterface.deleteAllIssue(issue);
 	}
 	
-	@PutMapping("/update/")
+	/*@PutMapping("/update/")
 	@CrossOrigin(origins = "http://localhost:4200")
 	public Issue updateIssue(Issue issue) {
 		return issueDAOInterface.updateIssue(issue);
-	}	
+	}*/	
 
 }
 
