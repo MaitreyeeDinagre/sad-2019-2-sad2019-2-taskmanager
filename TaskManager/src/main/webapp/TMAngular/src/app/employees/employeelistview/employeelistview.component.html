@@ -1,2 +1,5 @@
+<select [(ngModel)]="selectedEmployeId">
+    <option *ngFor="let employee of employees" [(ngValue)]="employee.issueId">{{employee.issueName}}</option>
+</select><br/>
 <button (click)="deleteEmployee()">Delete</button>
 <button (click)="updateIssue()">Update</button>

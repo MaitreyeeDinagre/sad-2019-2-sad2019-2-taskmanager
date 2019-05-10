@@ -19,15 +19,24 @@ export class IssueService {
     return this.httpClient.get("http://localhost:8888/JIRA-lite/TaskManager/issue/");  
   }
 
-  postIssue(form : issue) {
-    this.form = new FormData();
-    this.form.append("issueName", "First Full Entry",);
-    this.form.append("issueDescription", "qwertyuio");
-    this.form.append("issueStory", "1");
-    this.form.append("issueStatus", "1");
-    alert(this.form);
-    return this.httpClient.post(
-      this.rootURL + '/issue/', this.form);
+  postIssue(issue : FormData) {
+    alert(issue.get("issuedescription"));
+    if(issue.has("issuedescription")) {
+      this.form2 = new FormData();
+      this.form2.append("issueDescription", issue.get("issuedescription"));
+      this.form2.append("issueName", issue.get("issuename"));
+      this.form2.append("status", "1");
+      this.form2.append("story", "1");
+
+      return this.httpClient.post(
+        this.rootURL + '/issue/', this.form2);
+    }
+     else {
+       alert("null");
+        return null;
+     } 
+    
   }
 
+  
 }

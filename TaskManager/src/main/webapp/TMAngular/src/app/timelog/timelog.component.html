@@ -1,13 +1,27 @@
 
-    Log Description: <input type="text" [formControl]="logDescription"><br/>
-    Log Duration: <input type="number" [formControl]="logDuration">Hrs<br/>
-    Log Story: <input type="number" [formControl]="logStory"><br/>
-    Log Task: <input type="number" [formControl]="logTask"><br/>
-    Log Employee: <input type="number" [formControl]="logEmployee"><br/>
+    Log Description: <input type="text" [(ngModel)]="logDescription"><br/>
+    Log Duration: <input type="number" [(ngModel)]="logDuration">Hrs<br/>
+
+    <p>Story</p>
+    <select [(ngModel)]="selectedStoryId" >
+        <option *ngFor="let story of stories" [(ngValue)]="story.storyId">{{story.storyName}}</option>
+    </select>
+    <p>Task</p>
+    <select [(ngModel)]="selectedTaskId">
+        <option *ngFor="let task of tasks" [(ngValue)]="task.taskId">{{task.taskName}}</option>
+    </select>
+    <br/>
     <button (click)="timeLog()">Log Time</button><br/><br/>
 
-    Issue Name: <input type="text" [formControl]="issueName"><br/>
-    Issue Description: <input type="text" [formControl]="issueDescription"><br/>
-    Issue Story: <input type="number" [formControl]="issueStory"><br/>
-    Issue Status: <input type="number" [formControl]="issueStatus"><br/>
+    Issue Name: <input type="text" [(ngModel)]="issueName"><br/>
+    Issue Description: <input type="text" [(ngModel)]="issueDescription"><br/>
+
+    <p>Story</p>
+    <select [(ngModel)]="issueStoryId" >
+        <option *ngFor="let story of stories" [(ngValue)]="story.storyId">{{story.storyName}}</option>
+    </select><br/>
+    <p>Status</p>
+    <select [(ngModel)]="issueStatusId">
+        <option *ngFor="let status of statusList" [(ngValue)]="status.statusId">{{status.statusName}}</option>
+    </select><br/>
     <button (click)="issueLog()">Log Issue</button>

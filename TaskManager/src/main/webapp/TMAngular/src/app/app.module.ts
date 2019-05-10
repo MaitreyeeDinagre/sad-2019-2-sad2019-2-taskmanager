@@ -64,6 +64,10 @@ import { EmployeeComponent } from './employees/employee/employee.component';
         component : HomeComponent
       },
       {
+        path : 'home',
+        component : HomeComponent
+      },
+      {
         path : 'timelog',
         component : TimelogComponent
       },
@@ -78,10 +82,6 @@ import { EmployeeComponent } from './employees/employee/employee.component';
       {
         path : 'profile',
         component : ProfileComponent
-      },
-      {
-        path : '**',
-        component : NotfoundComponent
       }
     ]),
     NgbModule.forRoot()

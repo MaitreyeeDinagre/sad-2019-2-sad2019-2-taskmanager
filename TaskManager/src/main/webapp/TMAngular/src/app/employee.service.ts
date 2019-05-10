@@ -29,18 +29,18 @@ export class EmployeeService {
 
     deleteEmployee(empId : number) {
       return this.httpClient.delete(
-        this.rootURL + '/issue/delete/'+1);
+        this.rootURL + '/issue/delete/' + empId);
     }
 
-    updateIssue(issue : issue) {
-      this.form2 = new FormData();
+    updateIssue(issue : FormData) {
+      /*this.form2 = new FormData();
       this.form2.append("issueId", "1");
       this.form2.append("issueDescription", "First Full Entry");
       this.form2.append("issueName", "issueName1");
       this.form2.append("status", "2");
-      this.form2.append("story", "1");
+      this.form2.append("story", "1");*/
       return this.httpClient.put(
-        this.rootURL + '/issue/update/', this.form2);
+        this.rootURL + '/issue/update/', issue);
     }
 /*
 {
