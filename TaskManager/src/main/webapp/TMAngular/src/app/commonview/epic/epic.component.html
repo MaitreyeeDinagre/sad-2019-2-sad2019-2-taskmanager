@@ -11,21 +11,26 @@
             <thead>
             <tr>
               <th scope="col">Name</th>
-              <th scope="col">Status</th>
+              <th scope="col">Initiative</th>
               <th scope="col">View</th>
+              <th scope="col">Delete</th>
             </tr>
             </thead>
             <tbody>
             <tr *ngFor="let epic of epics">
               <td>{{epic.epicName}}</td>
-              <td></td>
+              <td>{{epic.initiative.initiativeName}}</td>
               <td><ngb-accordion (panelChange)="beforeChange($event)">
                 <ngb-panel id="preventchange-1" title="View">
                   <ng-template ngbPanelContent>
                     {{epic.epicDescription}}
                   </ng-template>
                 </ngb-panel>
-                </ngb-accordion></td>
+                </ngb-accordion>
+              </td>
+              <td>
+                <button (click)="deleteEpic(epic.epicId)">Delete</button>
+              </td>
             </tr>
             </tbody>
           </table>

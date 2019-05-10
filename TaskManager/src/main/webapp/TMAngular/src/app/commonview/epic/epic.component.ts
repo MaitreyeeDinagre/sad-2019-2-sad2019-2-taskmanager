@@ -32,4 +32,12 @@ export class EpicComponent implements OnInit {
     console.log(response);
   });
   }
+
+  deleteEpic(epicId : number) {
+    alert("epicId for Delete : " + epicId);
+    /*this.httpclient.delete("http://localhost:8888/JIRA-lite/TaskManager/issue/delete/" + epicId)
+    .subscribe( Response => {
+      alert("Issue Deleted");
+    })*/
+  }
 }
