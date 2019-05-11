@@ -24,16 +24,9 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-
 	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_191/src.zip"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-
-	<!--<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
-		<attributes>
-			<attribute name="module" value="true"/>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry exported="true" kind="lib" path="C:/Program Files/Java/jdk1.8.0_191/src.zip"/>
-	<classpathentry kind="output" path="target/classes"/>-->
+	<classpathentry exported="true" kind="lib" path="D:/MAITREYEE/Educational/Masters/SoftwareArchitectureDesign/SAD/EmailTemplates/activation.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/MAITREYEE/Educational/Masters/SoftwareArchitectureDesign/SAD/EmailTemplates/mail.jar"/>
+	<classpathentry kind="output" path="bin"/>
 </classpath>
