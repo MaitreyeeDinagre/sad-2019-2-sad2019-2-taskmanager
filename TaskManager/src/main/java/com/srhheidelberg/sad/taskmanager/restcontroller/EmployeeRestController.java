@@ -81,9 +81,9 @@ public class EmployeeRestController {
 				break;
 		
 			default:
-				EmployeeRole caRole = EmployeeRoleJPARepository.findByName(RoleName.ROLE_USER)
+				EmployeeRole userRole = EmployeeRoleJPARepository.findByName(RoleName.ROLE_USER)
 						.orElseThrow(() -> new RuntimeException("Fail! -> Cause: User Role not find."));
-				roles.add(caRole);
+				roles.add(userRole);
 			}
 		});
 
