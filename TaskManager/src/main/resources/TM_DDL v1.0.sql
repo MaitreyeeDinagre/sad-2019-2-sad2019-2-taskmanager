@@ -184,9 +184,16 @@ CREATE TABLE `taskmanager`.`users` (
 /* **************************Inserting Prepopulated Values**************************** */
 
 /* Inserting Initiative Values */
-INSERT INTO `taskmanager`.`initiative` (`initiativeid`, `initiativename`, `initiativedescription`) VALUES ('1', 'Initiative1', 'Project #1');
-INSERT INTO `taskmanager`.`initiative` (`initiativeid`, `initiativename`, `initiativedescription`) VALUES ('2', 'Initiative2', 'Project #2');
-INSERT INTO `taskmanager`.`initiative` (`initiativeid`, `initiativename`, `initiativedescription`) VALUES ('3', 'Initiative3', 'Project #3');
+INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('1', 'Design', 'Design Phase for Development');
+INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('2', 'Development', 'Development Phase for the Task or Process');
+INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('3', 'UnitTesting', 'Unit Testing for the Developed Component');
+INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('4', 'Review', 'Review Phase Includes: Development Review, Testing Review and Design Review');
+INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('5', 'Deployment', 'Deployment into different Environments and Orgs');
+INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('6', 'QualityAnalysis', 'Quality Analysis of Development, Testing and Deployment');
+INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('7', 'SmokeTesting', 'Testing the Deployed Components in the Target Environment');
+INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('8', 'IntegrationTesting', 'Testing the Integration of Multiple Deployments');
+INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('9', 'DataMigration', 'Movement of Data from Source Environment to Target Orgs');
+INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('10', 'Release', 'Release of Inititive or Product');
 
 /* Inserting Employee Profile Values */
 INSERT INTO `taskmanager`.`employeeprofile` (`employeeprofileid`, `employeeprofilename`, `employeeprofiledescription`) VALUES ('1', 'Senior Consultant', 'Architects and Managers');
@@ -206,14 +213,52 @@ INSERT INTO `taskmanager`.`status` (`statusid`, `statusname`, `statusdescription
 INSERT INTO `taskmanager`.`status` (`statusid`, `statusname`, `statusdescription`) VALUES ('4', 'Rejected', 'Process Rejected');
 INSERT INTO `taskmanager`.`status` (`statusid`, `statusname`, `statusdescription`) VALUES ('5', 'NotStarted', 'Process Not Started Yet');
 
-/* Inserting Initiative Values */
-INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('1', 'Design', 'Design Phase for Development');
-INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('2', 'Development', 'Development Phase for the Task or Process');
-INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('3', 'UnitTesting', 'Unit Testing for the Developed Component');
-INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('4', 'Review', 'Review Phase Includes: Development Review, Testing Review and Design Review');
-INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('5', 'Deployment', 'Deployment into different Environments and Orgs');
-INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('6', 'QualityAnalysis', 'Quality Analysis of Development, Testing and Deployment');
-INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('7', 'SmokeTesting', 'Testing the Deployed Components in the Target Environment');
-INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('8', 'IntegrationTesting', 'Testing the Integration of Multiple Deployments');
-INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('9', 'DataMigration', 'Movement of Data from Source Environment to Target Orgs');
-INSERT INTO `taskmanager`.`tasktype` (`tasktypeid`, `tasktypename`, `tasktypedescription`) VALUES ('10', 'Release', 'Release of Inititive or Product');
+/* Inserting Employee Values */
+INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`) VALUES ('1', 'Kosko', 'Male', '1', '1', '1');
+INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`) VALUES ('2', 'Mubeen', 'Male', '1', '2', '2');
+INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`) VALUES ('3', 'Sunny', 'Male', '2', '2', '1');
+INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`) VALUES ('4', 'Arpitha', 'Female', '2', '2', '3');
+INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`) VALUES ('5', 'Maitreyee', 'Female', '2', '1', '2');
+INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`) VALUES ('6', 'Neveditha', 'Female', '1', '3', '1');
+INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`) VALUES ('7', 'Manzil', 'Male', '2', '3', '3');
+
+/* Inserting Epic Values */
+INSERT INTO `taskmanager`.`epic` (`epicid`, `epicname`, `epicdescription`, `epicinitiative`) VALUES ('1', 'City Development', 'City Construction', '1');
+INSERT INTO `taskmanager`.`epic` (`epicid`, `epicname`, `epicdescription`, `epicinitiative`) VALUES ('2', 'Weather ', 'Weather Forcast', '1');
+INSERT INTO `taskmanager`.`epic` (`epicid`, `epicname`, `epicdescription`, `epicinitiative`) VALUES ('3', 'Software', 'Software Dev', '2');
+INSERT INTO `taskmanager`.`epic` (`epicid`, `epicname`, `epicdescription`, `epicinitiative`) VALUES ('3', 'Dhl', 'Courier Service', '2');
+
+
+/* Inserting Story Values */
+INSERT INTO `taskmanager`.`story` (`storyid`, `storyname`, `isstorycurrent`, `storyassignedto`, `storystatus`) VALUES ('1', 'Collection of Elements', '1', '1', '2');
+INSERT INTO `taskmanager`.`story` (`storyid`, `storyname`, `isstorycurrent`, `storyassignedto`, `storystatus`) VALUES ('2', 'Date/Day', '0', '4', '5');
+INSERT INTO `taskmanager`.`story` (`storyid`, `storyname`, `isstorycurrent`, `storyassignedto`, `storystatus`) VALUES ('3', 'Design', '1', '6', '3');
+INSERT INTO `taskmanager`.`story` (`storyid`, `storyname`, `isstorycurrent`, `storyassignedto`, `storystatus`) VALUES ('4', 'Get Location', '1', '3', '4');
+INSERT INTO `taskmanager`.`story` (`storyid`, `storyname`, `isstorycurrent`, `storyassignedto`, `storystatus`) VALUES ('5', 'Testing', '0', '3', '1');
+
+/* Inserting task Values */
+INSERT INTO `taskmanager`.`task` (`taskid`, `taskname`, `taskdescription`, `taskestimatedtime`, `taskactualtime`, `taskassignedto`, `taskstatus`) VALUES ('1', 'Roads', 'Roads Dev', '2', '1', '3', '1');
+INSERT INTO `taskmanager`.`task` (`taskid`, `taskname`, `taskdescription`, `taskestimatedtime`, `taskactualtime`, `taskassignedto`, `taskstatus`) VALUES ('2', 'Parks', 'Parks Dev', '3', '2', '1', '1');
+INSERT INTO `taskmanager`.`task` (`taskid`, `taskname`, `taskdescription`, `taskestimatedtime`, `taskactualtime`, `taskassignedto`, `taskstatus`) VALUES ('3', 'Implementation', 'Software Implementation', '2', '1', '2', '1');
+INSERT INTO `taskmanager`.`task` (`taskid`, `taskname`, `taskdescription`, `taskestimatedtime`, `taskactualtime`, `taskassignedto`, `taskstatus`) VALUES ('4', 'Verification', 'Software Verfication', '3', '2', '3', '1');
+INSERT INTO `taskmanager`.`task` (`taskid`, `taskname`, `taskdescription`, `taskestimatedtime`, `taskactualtime`, `taskassignedto`, `taskstatus`) VALUES ('5', 'Uiux', 'Design', '3', '2', '4', '1');
+INSERT INTO `taskmanager`.`task` (`taskid`, `taskname`, `taskdescription`, `taskestimatedtime`, `taskactualtime`, `taskassignedto`, `taskstatus`) VALUES ('6', 'Unit Testing', 'Testing', '7', '1', '5', '1');
+INSERT INTO `taskmanager`.`task` (`taskid`, `taskname`, `taskdescription`, `taskestimatedtime`, `taskactualtime`, `taskassignedto`, `taskstatus`) VALUES ('7', 'Integration Testing', 'Testing', '4', '3', '6', '1');
+
+/* Inserting issue Values */
+INSERT INTO `taskmanager`.`issue` (`issueid`, `issuename`, `issuedescription`, `issuestory`, `issuestatus`) VALUES ('1', 'collection issue', 'data cant be collected', '1', '1');
+INSERT INTO `taskmanager`.`issue` (`issueid`, `issuename`, `issuedescription`, `issuestory`, `issuestatus`) VALUES ('2', 'date issue', 'not selected issue', '2', '1');
+INSERT INTO `taskmanager`.`issue` (`issueid`, `issuename`, `issuedescription`, `issuestory`, `issuestatus`) VALUES ('3', 'design issue', 'design is not attractive', '3', '1');
+INSERT INTO `taskmanager`.`issue` (`issueid`, `issuename`, `issuedescription`, `issuestory`, `issuestatus`) VALUES ('4', 'location issue', 'location is out of map', '4', '1');
+INSERT INTO `taskmanager`.`issue` (`issueid`, `issuename`, `issuedescription`, `issuestory`, `issuestatus`) VALUES ('5', 'testing', 'djfnd', '5', '1');
+
+/* Inserting timelog Values */
+INSERT INTO `taskmanager`.`timelog` (`timelogid`, `timelogdescription`, `timelogaudit`, `timelogduration`, `timelogstory`, `timelogtask`, `timelogemployee`) VALUES ('1', 'devlopments take one months', '45', '2', '1', '1', '1');
+INSERT INTO `taskmanager`.`timelog` (`timelogid`, `timelogdescription`, `timelogaudit`, `timelogduration`, `timelogstory`, `timelogtask`, `timelogemployee`) VALUES ('2', 'construction take two months', '23', '4', '2', '3', '2');
+INSERT INTO `taskmanager`.`timelog` (`timelogid`, `timelogdescription`, `timelogaudit`, `timelogduration`, `timelogstory`, `timelogtask`, `timelogemployee`) VALUES ('3', 'design take 3 moths', '55', '3', '3', '6', '3');
+
+/* Inserting epicstorytask Values */
+INSERT INTO `taskmanager`.`epicstorytask` (`epicstorytaskid`, `epicstorytaskstory`, `epicstorytasktask`, `epicstorytaskepic`) VALUES ('1', '3', '4', '1');
+INSERT INTO `taskmanager`.`epicstorytask` (`epicstorytaskid`, `epicstorytaskstory`, `epicstorytasktask`, `epicstorytaskepic`) VALUES ('2', '2', '3', '2');
+INSERT INTO `taskmanager`.`epicstorytask` (`epicstorytaskid`, `epicstorytaskstory`, `epicstorytasktask`, `epicstorytaskepic`) VALUES ('3', '3', '4', '3');
+INSERT INTO `taskmanager`.`epicstorytask` (`epicstorytaskid`, `epicstorytaskstory`, `epicstorytasktask`, `epicstorytaskepic`) VALUES ('4', '4', '2', '2');
