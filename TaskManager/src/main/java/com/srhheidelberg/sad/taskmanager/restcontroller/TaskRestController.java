@@ -56,6 +56,4 @@ public class TaskRestController {
 	public Task updateTask(Task task) {
 		return updateTask(task);
 	}
-
-
 }

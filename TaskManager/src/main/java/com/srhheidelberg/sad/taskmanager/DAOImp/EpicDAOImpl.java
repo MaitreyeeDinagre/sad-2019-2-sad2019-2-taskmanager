@@ -26,9 +26,11 @@ public class EpicDAOImpl implements EpicDAOInterface{
 	public Epic createEpic(Epic epic) {
 		return epicJPARepository.save(epic);
 	}
-
 	
-	}
+	public List<Epic> epicunderinitiative(Integer initiativeId) {
+		return epicJPARepository.getByEpicInitiative(initiativeId);
+	}	
+}
 
 
 

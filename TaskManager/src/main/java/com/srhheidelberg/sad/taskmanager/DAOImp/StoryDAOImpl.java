@@ -39,7 +39,4 @@ public class StoryDAOImpl implements StoryDAOInterface{
 	public Story updateStory(Story story) {
 		return storyJPARepository.save(story);
 	}
-	
-	
-
 }

@@ -40,11 +40,11 @@ public class EpicStoryTaskDAOImpl implements EpicStoryTaskDAOInterface{
 		return epicstorytaskJPARepository.save(epicstorytask);
 	}
 	
-	/*public List<EpicStoryTask> storysunderepic(Integer storyId) {
-		return epicstorytaskJPARepository.getByEpicStory(storyId);
+	public List<EpicStoryTask> storysunderepic(Integer storyId) {
+		return epicstorytaskJPARepository.getByEpicStoryTaskEpic(storyId);
 	}
 	
 	public List<EpicStoryTask> tasksunderstory(Integer taskId) {
-		return epicstorytaskJPARepository.getByStoryTask(taskId);
-	}*/
+		return epicstorytaskJPARepository.getByEpicStoryTaskStory(taskId);
+	}
 }

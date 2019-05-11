@@ -54,10 +54,4 @@ public class EmployeeRole {
 		return "employeerole [employeeroleId=" + employeeroleId + ", employeeroleName=" + employeeroleName
 				+ ", employeeroleDescription=" + employeeroleDescription + "]";
 	}
-	
-	
-	
-	
-	
-
 }

@@ -165,6 +165,22 @@ CREATE TABLE `storytask` (
   CONSTRAINT `storytasktask_fk` FOREIGN KEY (`storytasktask`) REFERENCES `task` (`taskid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `taskmanager`.`users` (
+  `id` BIGINT(11) NOT NULL,
+  `name` VARCHAR(50) NULL DEFAULT NULL,
+  `password` VARCHAR(100) NULL DEFAULT NULL,
+  `username` VARCHAR(50) NULL,
+  `employeeId` INT(11) NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `username_UNIQUE` (`username` ASC),
+  INDEX `employeeId_idx` (`employeeId` ASC),
+  CONSTRAINT `employeeId`
+    FOREIGN KEY (`employeeId`)
+    REFERENCES `taskmanager`.`employee` (`employeeid`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 /* **************************Inserting Prepopulated Values**************************** */
 
 /* Inserting Initiative Values */

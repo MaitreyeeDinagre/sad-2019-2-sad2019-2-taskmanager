@@ -16,7 +16,7 @@ import com.srhheidelberg.sad.taskmanager.DAOInterface.EpicStoryTaskDAOInterface;
 import com.srhheidelberg.sad.taskmanager.model.EpicStoryTask;
 
 @RestController
-@RequestMapping("/storytask")
+@RequestMapping("/epicstorytask")
 public class EpicStoryTaskRestController {
 	
 	@Autowired
@@ -57,16 +57,16 @@ public class EpicStoryTaskRestController {
 	public EpicStoryTask updateEpicStoryTask(EpicStoryTask epicstorytask) {
 		return updateEpicStoryTask(epicstorytask);
 	}
-
-	/*@GetMapping("/getstorysunderepic")
+	
+	@GetMapping("/getstoryunderepic/{epicId}")
 	@CrossOrigin(origins = "http://localhost:4200")
-	public List<EpicStoryTask> storysunderepic(Integer storyId){
-		return epicstorytaskDAOInterface.storysunderepic(storyId);
+	public List<EpicStoryTask> storyunderepic(ModelMap modelMap, @PathVariable Integer epicId){
+		return epicstorytaskDAOInterface.storysunderepic(epicId);
 	}
 	
-	@GetMapping("/gettasksunderstory")
+	@GetMapping("/gettaskunderepic/{storyId}")
 	@CrossOrigin(origins = "http://localhost:4200")
-	public List<EpicStoryTask> tasksunderstory(Integer taskId){
-		return epicstorytaskDAOInterface.tasksunderstory(taskId);
-	}*/
+	public List<EpicStoryTask> taskunderepic(ModelMap modelMap, @PathVariable Integer storyId){
+		return epicstorytaskDAOInterface.tasksunderstory(storyId);
+	}
 }

@@ -13,56 +13,63 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name="storytask")
+@Table(name="epicstorytask")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class EpicStoryTask {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
-	@Column(name="storytaskid")
-	private Integer storyTaskId;
+	@Column(name="epicstorytaskid")
+	private Integer epicStoryTaskId;
 	
-	@Column(name="storytaskstory", insertable=false, updatable=false)
-	private Integer storyTaskStory;
+	@Column(name="epicstorytaskepic", insertable=false, updatable=false)
+	private Integer epicStoryTaskEpic;
 	
-	@Column(name="storytasktask", insertable=false, updatable=false)
-	private Integer storyTaskTask;
+	@Column(name="epicstorytaskstory", insertable=false, updatable=false)
+	private Integer epicStoryTaskStory;
+	
+	@Column(name="epicstorytasktask", insertable=false, updatable=false)
+	private Integer epicStoryTaskTask;
 	
 	@OneToOne(fetch=FetchType.EAGER)
-	@JoinColumn(name="storytaskstory")
+	@JoinColumn(name="epicstorytaskepic")
+	private Epic epic;
+	
+	@OneToOne(fetch=FetchType.EAGER)
+	@JoinColumn(name="epicstorytaskstory")
 	private Story story;
 	
 	@OneToOne(fetch=FetchType.EAGER)
-	@JoinColumn(name="storytasktask")
+	@JoinColumn(name="epicstorytasktask")
 	private Task task;
 
 	public Integer getStoryTaskId() {
-		return storyTaskId;
+		return epicStoryTaskId;
 	}
 
-	public void setStoryTaskId(Integer storyTaskId) {
-		this.storyTaskId = storyTaskId;
+	public void setepicStoryTaskId(Integer epicStoryTaskId) {
+		this.epicStoryTaskId = epicStoryTaskId;
 	}
 
-	public Integer getStoryTaskStory() {
-		return storyTaskStory;
+	public Integer getepicStoryTaskStory() {
+		return epicStoryTaskStory;
 	}
 
-	public void setStoryTaskStory(Integer storyTaskStory) {
-		this.storyTaskStory = storyTaskStory;
+	public void setepicStoryTaskStory(Integer epicStoryTaskStory) {
+		this.epicStoryTaskStory = epicStoryTaskStory;
 	}
 
-	public Integer getStoryTaskTask() {
-		return storyTaskTask;
+	public Integer getepicStoryTaskTask() {
+		return epicStoryTaskTask;
 	}
 
-	public void setStoryTaskTask(Integer storyTaskTask) {
-		this.storyTaskTask = storyTaskTask;
+	public void setepicStoryTaskTask(Integer epicStoryTaskTask) {
+		this.epicStoryTaskTask = epicStoryTaskTask;
 	}
 
 	@Override
 	public String toString() {
-		return "StoryTask [storyTaskId=" + storyTaskId + ", storyTaskStory=" + storyTaskStory + ", storyTaskTask="
-				+ storyTaskTask + "]";
+		return "EpicStoryTask [epicStoryTaskId=" + epicStoryTaskId + ", epicStoryTaskStory=" + epicStoryTaskStory + ", epicStoryTaskTask="
+				+ epicStoryTaskTask + "]";
 	}
 	
 	

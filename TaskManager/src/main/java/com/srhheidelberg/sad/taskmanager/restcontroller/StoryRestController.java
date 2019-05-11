@@ -56,5 +56,4 @@ public class StoryRestController {
 	public Story updateStory(Story story) {
 		return storyDAOInterface.updateStory(story);
 	}
-
 }

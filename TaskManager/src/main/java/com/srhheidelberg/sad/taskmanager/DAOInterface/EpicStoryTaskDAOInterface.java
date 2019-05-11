@@ -18,8 +18,8 @@ public interface EpicStoryTaskDAOInterface {
 
 	EpicStoryTask updateEpicStoryTask(EpicStoryTask epicstorytask);
 	
-	//List<EpicStoryTask> storysunderepic(Integer storyId);
+	List<EpicStoryTask> storysunderepic(Integer storyId);
 	
-	//List<EpicStoryTask> tasksunderstory(Integer taskId);
+	List<EpicStoryTask> tasksunderstory(Integer taskId);
 
 }
