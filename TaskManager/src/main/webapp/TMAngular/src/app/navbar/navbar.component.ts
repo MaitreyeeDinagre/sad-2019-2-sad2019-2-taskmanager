@@ -17,7 +17,6 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
 
     if(this.cookieService.get('employeeId')) {
-      alert("User Cookie Available");
       this.employeeId = this.cookieService.get('employeeId');
       this.employeeProfile = this.cookieService.get('employeeProfile');
       this.employeeInitiative = this.cookieService.get('employeeInitiative');
@@ -25,7 +24,6 @@ export class NavbarComponent implements OnInit {
       this.isManager = (this.employeeProfile == "1") ? true : false;
     }
     else {
-      alert("No Cookie");
     }
 
   }

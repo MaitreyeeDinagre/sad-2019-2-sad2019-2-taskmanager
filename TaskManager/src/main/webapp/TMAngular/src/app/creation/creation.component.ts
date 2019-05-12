@@ -21,13 +21,11 @@ export class CreationComponent implements OnInit {
 
   ngOnInit() {
     if(this.cookieService.get('employeeId')) {
-      alert("User Cookie Available");
       this.employeeId = this.cookieService.get('employeeId');
       this.employeeProfile = this.cookieService.get('employeeProfile');
       this.employeeInitiative = this.cookieService.get('employeeInitiative');
     }
     else {
-      alert("No Cookie");
     }
   }
 
@@ -39,7 +37,6 @@ export class CreationComponent implements OnInit {
   }
 
   createEpic() {
-    alert("createEpic()" + this.employeeInitiative);
 
     this.form = new FormData();
       this.form.append("epicName", "Name",);

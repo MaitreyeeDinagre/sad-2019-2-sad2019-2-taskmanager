@@ -70,6 +70,8 @@ CREATE TABLE `employee` (
   `employeeprofile` int(11),
   `employeerole` int(11),
   `employeeinitiative` int(11),
+  UNIQUE KEY `employeeemailid_UNIQUE` (`employeeemailid`),
+  UNIQUE KEY `employeepassword_UNIQUE` (`employeepassword`),
   PRIMARY KEY (`employeeid`),
   UNIQUE KEY `employeename_UNIQUE` (`employeename`),
   KEY `employeeprofile_fk_idx` (`employeeprofile`),
