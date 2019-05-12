@@ -20,6 +20,8 @@ public interface EpicStoryTaskDAOInterface {
 
 	List<EpicStoryTask> getByStory(Integer storyId);
 	
+	List<EpicStoryTask> getByEpic(Integer epicId);
+	
 	//List<EpicStoryTask> storysunderepic(Integer storyId);
 	
 	//List<EpicStoryTask> tasksunderstory(Integer taskId);

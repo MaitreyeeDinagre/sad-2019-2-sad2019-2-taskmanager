@@ -7,6 +7,9 @@
       </div>
     </ng-template>
     <ng-template ngbPanelContent>
+        <select [(ngModel)]="selectedEpicId" #t (change)="getStory(t.value)">
+            <option *ngFor="let epic of epics" [(ngValue)]="epic.epicId" >{{epic.epicName}}</option>
+        </select><br/>
         <table class="table table-striped" border="2">
             <thead>
             <tr>
@@ -16,9 +19,10 @@
             </thead>
             <tbody>
             <tr *ngFor="let story of stories">
-              <td>{{story.storyName}}</td>
-              <td>{{story.storyDescription}}</td>
+              <td>{{story.story.storyName}}</td>
+              <td>{{story.story.storyDescription}}</td>
             </tr>
             </tbody>
           </table>
     </ng-template>
+    

@@ -44,6 +44,11 @@ public class EpicStoryTaskDAOImpl implements EpicStoryTaskDAOInterface{
 	public List<EpicStoryTask> getByStory(Integer storyId) {
 		return epicstorytaskJPARepository.getByEpicStoryTaskStory(storyId);
 	}
+
+	@Override
+	public List<EpicStoryTask> getByEpic(Integer epicId) {
+		return epicstorytaskJPARepository.getByEpicStoryTaskEpic(epicId);
+	}
 	
 	/*public List<EpicStoryTask> storysunderepic(Integer storyId) {
 		return epicstorytaskJPARepository.getByEpicStory(storyId);

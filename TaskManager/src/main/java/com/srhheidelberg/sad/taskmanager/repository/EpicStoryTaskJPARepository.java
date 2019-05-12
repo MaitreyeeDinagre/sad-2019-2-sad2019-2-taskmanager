@@ -16,5 +16,7 @@ public interface EpicStoryTaskJPARepository extends JpaRepository<EpicStoryTask,
 	//List<EpicStoryTask> getByStoryTask(Integer taskId);
 	
 	List<EpicStoryTask> getByEpicStoryTaskStory(Integer epicStoryTaskEpic);
+	
+	List<EpicStoryTask> getByEpicStoryTaskEpic(Integer epicStoryTaskEpic);
 
 }

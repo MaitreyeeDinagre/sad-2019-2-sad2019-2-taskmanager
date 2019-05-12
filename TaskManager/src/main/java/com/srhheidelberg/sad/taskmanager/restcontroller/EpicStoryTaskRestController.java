@@ -70,9 +70,15 @@ public class EpicStoryTaskRestController {
 		return epicstorytaskDAOInterface.tasksunderstory(taskId);
 	}*/
 	
-	@GetMapping("/getByStory/{storyId}")
+	@GetMapping("/getbystory/{storyId}")
 	@CrossOrigin(origins = "http://localhost:4200")
 	public List<EpicStoryTask> getByStory(ModelMap modelMap, @PathVariable Integer storyId) {
 		return epicstorytaskDAOInterface.getByStory(storyId);
+	}
+	
+	@GetMapping("/getbyepic/{epicId}")
+	@CrossOrigin(origins = "http://localhost:4200")
+	public List<EpicStoryTask> getByEpic(ModelMap modelMap, @PathVariable Integer epicId) {
+		return epicstorytaskDAOInterface.getByStory(epicId);
 	}
 }

@@ -66,6 +66,40 @@ public class EpicStoryTask {
 		this.epicStoryTaskTask = epicStoryTaskTask;
 	}
 
+	
+	
+	public Integer getEpicStoryTaskEpic() {
+		return epicStoryTaskEpic;
+	}
+
+	public void setEpicStoryTaskEpic(Integer epicStoryTaskEpic) {
+		this.epicStoryTaskEpic = epicStoryTaskEpic;
+	}
+
+	public Story getEpic() {
+		return epic;
+	}
+
+	public void setEpic(Story epic) {
+		this.epic = epic;
+	}
+
+	public Story getStory() {
+		return story;
+	}
+
+	public void setStory(Story story) {
+		this.story = story;
+	}
+
+	public Task getTask() {
+		return task;
+	}
+
+	public void setTask(Task task) {
+		this.task = task;
+	}
+
 	@Override
 	public String toString() {
 		return "EpicStoryTask [epicStoryTaskId=" + epicStoryTaskId + ", epicStoryTaskEpic=" + epicStoryTaskEpic

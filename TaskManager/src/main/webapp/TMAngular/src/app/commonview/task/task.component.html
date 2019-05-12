@@ -7,6 +7,9 @@
       </div>
     </ng-template>
     <ng-template ngbPanelContent>
+        <select [(ngModel)]="selectedEpicId" #t (change)="getTask(t.value)">
+            <option *ngFor="let epic of epics" [(ngValue)]="epic.epicId" >{{epic.epicName}}</option>
+        </select><br/>
         <table class="table table-striped" border="2">
             <thead>
             <tr>
@@ -17,12 +20,12 @@
             </thead>
             <tbody>
             <tr *ngFor="let task of tasks">
-              <td>{{task.taskName}}</td>
-              <td></td>
+              <td>{{task.task.taskName}}</td>
+              <td>{{task.task.taskStatus}}</td>
               <td><ngb-accordion (panelChange)="beforeChange($event)">
                 <ngb-panel id="preventchange-1" title="View">
                   <ng-template ngbPanelContent>
-                    {{task.taskDescription}}
+                    {{task.task.taskDescription}}
                   </ng-template>
                 </ngb-panel>
                 </ngb-accordion></td>
