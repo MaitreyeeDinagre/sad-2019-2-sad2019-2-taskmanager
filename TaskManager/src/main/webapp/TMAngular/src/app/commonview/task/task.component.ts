@@ -29,13 +29,11 @@ export class TaskComponent implements OnInit {
   ngOnInit() {
 
     if(this.cookieService.get('employeeId')) {
-      alert("User Cookie Available");
       this.employeeId = this.cookieService.get('employeeId');
       this.employeeProfile = this.cookieService.get('employeeProfile');
       this.employeeInitiative = this.cookieService.get('employeeInitiative');
     }
     else {
-      alert("No Cookie");
     }
     this.getEpic();
   }

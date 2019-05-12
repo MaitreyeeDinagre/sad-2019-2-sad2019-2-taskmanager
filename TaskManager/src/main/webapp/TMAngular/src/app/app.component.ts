@@ -20,19 +20,16 @@ export class AppComponent {
 
   ngOnInit() {
     if(this.cookieService.get('employeeId')) {
-      alert("User Cookie Available");
       this.loggedIn = true;
       this.loggedOut = !this.loggedIn;
     }
     else {
-      alert("User Cookie Unavailable");
       this.loggedIn = false;
       this.loggedOut = !this.loggedIn;
     }
   }
 
   loginUser() {
-    alert(this.emailId + this.password);
     this.httpClient.get("http://localhost:8888/JIRA-lite/TaskManager/employee/login/" 
     + this.emailId + "/"+ this.password)
     .subscribe(Response => {
@@ -42,7 +39,8 @@ export class AppComponent {
     this.cookieService.set( 'employeeId', this.loggedUser.employeeId );
     this.cookieService.set( 'employeeInitiative', this.loggedUser.employeeInitiative );
     this.cookieService.set( 'employeeProfile', this.loggedUser.employeeProfile );
-    alert("Logged In ");
+
+    window.location.href="http://localhost:4200/home";
       
       console.log(Response);
     });

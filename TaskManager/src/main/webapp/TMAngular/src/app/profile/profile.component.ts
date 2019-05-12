@@ -64,11 +64,10 @@ export class ProfileComponent implements OnInit {
   }
 
   logoutUser() {
-    alert();
     this.cookieService.deleteAll();
-    alert("User Cookie Deleted");
     this.loggedIn = false;
     this.loggedOut = !this.loggedIn;
+    window.location.href="http://localhost:4200";
   } 
 
 }
