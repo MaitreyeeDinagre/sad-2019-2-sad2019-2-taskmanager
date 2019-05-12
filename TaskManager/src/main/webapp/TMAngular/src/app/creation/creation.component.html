@@ -1,22 +1,32 @@
-Epic Name: <input type="text" [formControl]="epicName"><br/>
-Epic Description: <input type="text" [formControl]="epicDescription"><br/>
-Epic Initiative: <input type="number" [formControl]="epicInitiative"><br/>
+<div class="solid">
+        <span class="input-group-text">Epic Name:</span> <input type="text" [formControl]="epicName"><br/>
+        <span class="input-group-text">Epic Description:</span> <input type="text" [formControl]="epicDescription"><br/>
+        <span class="input-group-text">Epic Initiative:</span> <input type="number" [formControl]="epicInitiative"><br/>
 <button (click)="createEpic()">Create Epic</button>
+</div>
+
 <br/>
 <br/>
-Story Name: <input type="text" [formControl]="storyName"><br/>
-Story Estimated: <input type="number" [formControl]="storyEstimated"><br/>
-Story Actual: <input type="number" [formControl]="storyActual"><br/>
-Story Current: <input type="checkbox" [formControl]="storyIsCurrent"><br/>
-Story Assigned To: <input type="number" [formControl]="storyAssignedTo"><br/>
-Story Status: <input type="number" [formControl]="storyStatus"><br/> 
+
+<div class="solid">
+        <span class="input-group-text">Story Name:</span> <input type="text" [formControl]="storyName"><br/>
+            <span class="input-group-text">Story Estimated:</span> <input type="number" [formControl]="storyEstimated"><br/>
+                <span class="input-group-text">Story Actual:</span> <input type="number" [formControl]="storyActual"><br/>
+                    <span class="input-group-text">Story Current: </span><input type="checkbox" [formControl]="storyIsCurrent"><br/>
+                        <span class="input-group-text">Story Assigned To:</span> <input type="number" [formControl]="storyAssignedTo"><br/>
+                        <span class="input-group-text">Story Status: </span><input type="number" [formControl]="storyStatus"><br/> 
 <button (click)="createStory()">Create Story</button>
+</div>
+
 <br/>
 <br/>
-Task Name: <input type="text" [formControl]="taskName"><br/>
-Task Estimated: <input type="number" [formControl]="taskEstimated"><br/>
-Task Actual: <input type="number" [formControl]="taskActual"><br/>
-Task Description: <input type="text" [formControl]="taskDescription"><br/>
-Task Assigned To: <input type="number" [formControl]="taskAssignedTo"><br/>
-Task Status: <input type="number" [formControl]="taskStatus"><br/> 
+
+<div class="solid">
+        <span class="input-group-text">Task Name: </span> <input type="text" [formControl]="taskName"><br/>
+            <span class="input-group-text">Task Estimated: </span><input type="number" [formControl]="taskEstimated"><br/>
+                <span class="input-group-text">Task Actual:</span> <input type="number" [formControl]="taskActual"><br/>
+                    <span class="input-group-text">Task Description:</span> <input type="text" [formControl]="taskDescription"><br/>
+                        <span class="input-group-text">Task Assigned To:</span> <input type="number" [formControl]="taskAssignedTo"><br/>
+                            <span class="input-group-text">Task Status:</span> <input type="number" [formControl]="taskStatus"><br/> 
 <button (click)="createTask()">Create Task</button>
+</div>

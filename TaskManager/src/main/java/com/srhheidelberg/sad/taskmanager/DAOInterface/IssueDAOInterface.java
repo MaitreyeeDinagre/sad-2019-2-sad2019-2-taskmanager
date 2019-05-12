@@ -17,5 +17,7 @@ public interface IssueDAOInterface {
 	void deleteAllIssue(List<Issue> issue);
 
 	Issue updateIssue(Issue issue);
+	
+	List<Issue> getByIssueStory(Integer issueStory);
 
 }
