@@ -3,7 +3,10 @@
     <ng-template ngbPanelHeader let-closed="closed">
       <div class="d-flex align-items-center justify-content-between">
         <h5 class="m-0">Story</h5>
-        <button ngbPanelToggle class="btn btn-link p-0">&#9660;</button>
+        <!-----button ngbPanelToggle class="btn btn-link p-0">&#9660;</button>--->
+        <button ngbPanelToggle class="btn btn-link p-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="arrow-down" onclick="this.classList.toggle('active')"></div>
+        </button>
       </div>
     </ng-template>
     <ng-template ngbPanelContent>
