@@ -38,5 +38,11 @@ public class EpicRestController {
 	public List<Epic> getAllEpic() {
 		return epicDAOInterface.getAllEpic();
 	}
+	
+	@GetMapping("/getbyinitiative/{initiativeid}")
+	@CrossOrigin(origins = "http://localhost:4200")
+	public List<Epic> getByepicInitiative(ModelMap modelMap, @PathVariable Integer initiativeid) {
+		return epicDAOInterface.getByEpicInitiative(initiativeid);
+	}
 
 }

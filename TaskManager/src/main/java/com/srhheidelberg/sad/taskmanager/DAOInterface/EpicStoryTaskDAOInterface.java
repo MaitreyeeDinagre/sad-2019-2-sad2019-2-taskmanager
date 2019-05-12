@@ -17,6 +17,8 @@ public interface EpicStoryTaskDAOInterface {
 	void deleteAllEpicStoryTask(List<EpicStoryTask> epicstorytask);
 
 	EpicStoryTask updateEpicStoryTask(EpicStoryTask epicstorytask);
+
+	List<EpicStoryTask> getByStory(Integer storyId);
 	
 	//List<EpicStoryTask> storysunderepic(Integer storyId);
 	

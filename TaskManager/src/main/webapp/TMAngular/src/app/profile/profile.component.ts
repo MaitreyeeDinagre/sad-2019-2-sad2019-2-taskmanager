@@ -3,6 +3,7 @@ import { employee } from '../employee.model';
 import { role } from '../role.model';
 import { profile } from '../profile.model';
 import { initiative } from '../initiative.model';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-profile',
@@ -15,7 +16,11 @@ export class ProfileComponent implements OnInit {
   employeeRole = new role;
   employeeInitiative = new initiative;
 
-  constructor() { 
+  loggedIn : boolean = true;
+  loggedOut : boolean = !this.loggedIn;
+  cookieValue = 'UNKNOWN';
+
+  constructor(private cookieService : CookieService) { 
 
     this.employeeProfile.profileid = 1;
     this.employeeProfile.profilename = "Profile 1";
@@ -57,5 +62,13 @@ export class ProfileComponent implements OnInit {
     this.employeeDetail.employeedetails = "";
     this.employeeDetail.employeeinitiative = this.employeeInitiative;
   }
+
+  logoutUser() {
+    alert();
+    this.cookieService.deleteAll();
+    alert("User Cookie Deleted");
+    this.loggedIn = false;
+    this.loggedOut = !this.loggedIn;
+  } 
 
 }

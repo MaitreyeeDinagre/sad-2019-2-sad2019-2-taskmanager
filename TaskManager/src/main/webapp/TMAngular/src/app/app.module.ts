@@ -60,10 +60,6 @@ import { EmployeeComponent } from './employees/employee/employee.component';
     FormsModule,
     RouterModule.forRoot([
       {
-        path : '',
-        component : HomeComponent
-      },
-      {
         path : 'home',
         component : HomeComponent
       },

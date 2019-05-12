@@ -43,5 +43,9 @@ public class EmployeeDAOImpl implements EmployeeDAOInterface{
 	public List<Employee> employeesundertask(Integer taskId) {
 		return employeeJPARepository.getByEmployeeTask(taskId);
 	}*/
+	
+	public Employee loginEmployee(String emailId, String password) {
+		return employeeJPARepository.getByEmployeeEmailIdAndEmployeePassword(emailId, password);
+	}
 
 }

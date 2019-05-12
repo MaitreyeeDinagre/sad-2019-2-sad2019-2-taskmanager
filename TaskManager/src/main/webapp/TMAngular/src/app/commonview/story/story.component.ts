@@ -21,7 +21,7 @@ export class StoryComponent implements OnInit {
   getStory(){
 
     this.httpclient
-  .get('http://localhost:8888/JIRA-lite/TaskManager/story/')
+  .get('http://localhost:8888/JIRA-lite/TaskManager/epicstorytask/getByStory/1')
   .subscribe( response => {
     this.stories = response;
     console.log(response);

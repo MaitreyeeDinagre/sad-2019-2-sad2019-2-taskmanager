@@ -12,6 +12,8 @@ public interface EpicDAOInterface {
 	Epic getEpic(Integer EpicId);
 	
 	Epic createEpic(Epic epic);
+
+	List<Epic> getByEpicInitiative(Integer epicInitiative);
 	
 
 	

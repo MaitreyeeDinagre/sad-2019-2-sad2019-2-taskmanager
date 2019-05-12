@@ -1,5 +1,7 @@
 package com.srhheidelberg.sad.taskmanager.repository;
 
+import java.util.List;
+
 //import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,5 +14,7 @@ public interface EpicStoryTaskJPARepository extends JpaRepository<EpicStoryTask,
 	//List<EpicStoryTask> getByEpicStory(Integer storyId);
 	
 	//List<EpicStoryTask> getByStoryTask(Integer taskId);
+	
+	List<EpicStoryTask> getByEpicStoryTaskStory(Integer epicStoryTaskEpic);
 
 }
