@@ -27,6 +27,12 @@ public class EpicDAOImpl implements EpicDAOInterface{
 		return epicJPARepository.save(epic);
 	}
 
+	@Override
+	public List<Epic> getByEpicInitiative(Integer epicInitiative) {
+		
+		return epicJPARepository.getByEpicInitiative(epicInitiative);
+	}
+
 	
 	}
 

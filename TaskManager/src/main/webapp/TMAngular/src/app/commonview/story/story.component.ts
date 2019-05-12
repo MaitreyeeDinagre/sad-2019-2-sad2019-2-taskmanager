@@ -5,6 +5,7 @@ import {story} from '../../story.model';
 import { Observable } from 'rxjs';
 import{FormsModule} from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @Component({
@@ -16,12 +17,21 @@ export class StoryComponent implements OnInit {
 
   stories: any;
   story = new story();
-  constructor(private storyservice: StoryService , private httpclient : HttpClient) { }
 
-  getStory(){
+  selectedEpicId : number;
+  epics : any;
+
+  employeeId : string;
+  employeeProfile : string;
+  employeeInitiative : string;
+
+  constructor(private storyservice: StoryService , private httpclient : HttpClient,  private cookieService : CookieService) { }
+
+  getStory(value : string){
+  //alert(">>>>>>>> " + value.split(":")[1]);
 
     this.httpclient
-  .get('http://localhost:8888/JIRA-lite/TaskManager/story/')
+  .get('http://localhost:8888/JIRA-lite/TaskManager/epicstorytask/getbyepic/' + value.split(":")[1])
   .subscribe( response => {
     this.stories = response;
     console.log(response);
@@ -29,7 +39,27 @@ export class StoryComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getStory();
-  }
+    if(this.cookieService.get('employeeId')) {
+      alert("User Cookie Available");
+      this.employeeId = this.cookieService.get('employeeId');
+      this.employeeProfile = this.cookieService.get('employeeProfile');
+      this.employeeInitiative = this.cookieService.get('employeeInitiative');
+    }
+    else {
+      alert("No Cookie");
+    }
+    this.getEpicList();
+    
+}
+
+getEpicList() {
+  this.httpclient
+  .get('http://localhost:8888/JIRA-lite/TaskManager/epic/getbyinitiative/' + this.employeeInitiative)
+  .subscribe( response => {
+    this.epics = response;
+    console.log(response);
+    
+  });
+}
 
 }

@@ -15,5 +15,7 @@ public interface EmployeeJPARepository extends JpaRepository<Employee, Integer>{
 	//List<Employee> getByEmployeeStory(Integer storyId);
 	
 	//List<Employee> getByEmployeeTask(Integer taskId);
+	
+	Employee getByEmployeeEmailIdAndEmployeePassword(String employeeemailid, String employeepassword);
 
 }

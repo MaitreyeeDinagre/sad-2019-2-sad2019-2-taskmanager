@@ -19,5 +19,7 @@ public interface EmployeeDAOInterface {
 	//List<Employee> employeesunderstory(Integer storyId);
 	
 	//List<Employee> employeesundertask(Integer taskId);
+	
+	Employee loginEmployee(String emailId, String password);
 
 }

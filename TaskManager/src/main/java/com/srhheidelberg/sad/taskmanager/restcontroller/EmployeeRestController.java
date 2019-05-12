@@ -40,6 +40,12 @@ public class EmployeeRestController {
 		return employeeDAOInterface.getAllEmployee();
 	}
 	
+	@GetMapping("/login/{email}/{password}")
+	@CrossOrigin(origins = "http://localhost:4200")
+	public Employee loginEmployee(ModelMap modelMap, @PathVariable String email,  @PathVariable String password) {
+		return employeeDAOInterface.loginEmployee(email, password);
+	}
+	
 	/*@GetMapping("/getemployeesunderinitiative/{initiativeId}")
 	@CrossOrigin(origins = "http://localhost:4200")
 	public List<Employee> employeesunderinitiative(Integer initiativeId){

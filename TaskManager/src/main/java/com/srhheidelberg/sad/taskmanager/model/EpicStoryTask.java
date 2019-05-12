@@ -13,59 +13,100 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name="storytask")
+@Table(name="epicstorytask")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class EpicStoryTask {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
-	@Column(name="storytaskid")
-	private Integer storyTaskId;
+	@Column(name="epicstorytaskid")
+	private Integer epicStoryTaskId;
 	
-	@Column(name="storytaskstory", insertable=false, updatable=false)
-	private Integer storyTaskStory;
+	@Column(name="epicstorytaskepic", insertable=false, updatable=false)
+	private Integer epicStoryTaskEpic;
 	
-	@Column(name="storytasktask", insertable=false, updatable=false)
-	private Integer storyTaskTask;
+	@Column(name="epicstorytaskstory", insertable=false, updatable=false)
+	private Integer epicStoryTaskStory;
+	
+	@Column(name="epicstorytasktask", insertable=false, updatable=false)
+	private Integer epicStoryTaskTask;
 	
 	@OneToOne(fetch=FetchType.EAGER)
-	@JoinColumn(name="storytaskstory")
+	@JoinColumn(name="epicstorytaskepic")
+	private Story epic;
+	
+	@OneToOne(fetch=FetchType.EAGER)
+	@JoinColumn(name="epicstorytaskstory")
 	private Story story;
 	
 	@OneToOne(fetch=FetchType.EAGER)
-	@JoinColumn(name="storytasktask")
+	@JoinColumn(name="epicstorytasktask")
 	private Task task;
 
-	public Integer getStoryTaskId() {
-		return storyTaskId;
+	public Integer getEpicStoryTaskId() {
+		return epicStoryTaskId;
 	}
 
-	public void setStoryTaskId(Integer storyTaskId) {
-		this.storyTaskId = storyTaskId;
+	public void setEpicStoryTaskId(Integer epicStoryTaskId) {
+		this.epicStoryTaskId = epicStoryTaskId;
 	}
 
-	public Integer getStoryTaskStory() {
-		return storyTaskStory;
+	public Integer getEpicStoryTaskStory() {
+		return epicStoryTaskStory;
 	}
 
-	public void setStoryTaskStory(Integer storyTaskStory) {
-		this.storyTaskStory = storyTaskStory;
+	public void setEpicStoryTaskStory(Integer epicStoryTaskStory) {
+		this.epicStoryTaskStory = epicStoryTaskStory;
 	}
 
-	public Integer getStoryTaskTask() {
-		return storyTaskTask;
+	public Integer getEpicStoryTaskTask() {
+		return epicStoryTaskTask;
 	}
 
-	public void setStoryTaskTask(Integer storyTaskTask) {
-		this.storyTaskTask = storyTaskTask;
+	public void setEpicStoryTaskTask(Integer epicStoryTaskTask) {
+		this.epicStoryTaskTask = epicStoryTaskTask;
+	}
+
+	
+	
+	public Integer getEpicStoryTaskEpic() {
+		return epicStoryTaskEpic;
+	}
+
+	public void setEpicStoryTaskEpic(Integer epicStoryTaskEpic) {
+		this.epicStoryTaskEpic = epicStoryTaskEpic;
+	}
+
+	public Story getEpic() {
+		return epic;
+	}
+
+	public void setEpic(Story epic) {
+		this.epic = epic;
+	}
+
+	public Story getStory() {
+		return story;
+	}
+
+	public void setStory(Story story) {
+		this.story = story;
+	}
+
+	public Task getTask() {
+		return task;
+	}
+
+	public void setTask(Task task) {
+		this.task = task;
 	}
 
 	@Override
 	public String toString() {
-		return "StoryTask [storyTaskId=" + storyTaskId + ", storyTaskStory=" + storyTaskStory + ", storyTaskTask="
-				+ storyTaskTask + "]";
+		return "EpicStoryTask [epicStoryTaskId=" + epicStoryTaskId + ", epicStoryTaskEpic=" + epicStoryTaskEpic
+				+ ", epicStoryTaskStory=" + epicStoryTaskStory + ", epicStoryTaskTask=" + epicStoryTaskTask + ", epic="
+				+ epic + ", story=" + story + ", task=" + task + "]";
 	}
-	
-	
-	
 
+
+	
 }

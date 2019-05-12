@@ -36,6 +36,12 @@ public class Employee {
 	@Column(name="employeeinitiative", insertable=false, updatable=false)
 	private Integer employeeInitiative;
 	
+	@Column(name="employeeemailid")
+	private String employeeEmailId;
+	
+	@Column(name="employeepassword")
+	private String employeePassword;
+	
 	@OneToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="employeeinitiative")
 	private Initiative initiative;
@@ -120,14 +126,32 @@ public class Employee {
 		this.role = role;
 	}
 
+	public String getEmployeeEmailId() {
+		return employeeEmailId;
+	}
+
+	public void setEmployeeEmailId(String employeeEmailId) {
+		this.employeeEmailId = employeeEmailId;
+	}
+
+	public String getEmployeePassword() {
+		return employeePassword;
+	}
+
+	public void setEmployeePassword(String employeePassword) {
+		this.employeePassword = employeePassword;
+	}
+
 	@Override
 	public String toString() {
 		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", employeeDetails="
 				+ employeeDetails + ", employeeProfile=" + employeeProfile + ", employeerole=" + employeerole
-				+ ", employeeInitiative=" + employeeInitiative + ", initiative=" + initiative + ", profile=" + profile
+				+ ", employeeInitiative=" + employeeInitiative + ", employeeEmailId=" + employeeEmailId
+				+ ", employeePassword=" + employeePassword + ", initiative=" + initiative + ", profile=" + profile
 				+ ", role=" + role + "]";
 	}
 
+	
 	
 
 }
