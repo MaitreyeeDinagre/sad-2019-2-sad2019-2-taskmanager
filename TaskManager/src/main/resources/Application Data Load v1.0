@@ -34,8 +34,8 @@ INSERT INTO `taskmanager`.`status` (`statusid`, `statusname`, `statusdescription
 
 
 /* Inserting Employee Values */
-INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`, `employeeemailid`,`employeepassword) VALUES ('1', 'Kosko', 'Male', '1', '1', '1', 'kosko', 'kosko');
-INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`, `employeeemailid`,`employeepassword) VALUES ('2', 'Mubeen', 'Male', '1', '2', '2', 'mubeen', 'mubeen');
+INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`, `employeeemailid`,`employeepassword) VALUES ('1', 'Admin', 'Male', '1', '1', '1', 'admin', 'admin');
+INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`, `employeeemailid`,`employeepassword) VALUES ('2', 'User', 'Male', '1', '2', '2', 'user', 'user');
 INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`, `employeeemailid`,`employeepassword) VALUES ('3', 'Sunny', 'Male', '2', '2', '1', 'sunny', 'sunny');
 INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`, `employeeemailid`,`employeepassword) VALUES ('4', 'Arpitha', 'Female', '2', '2', '3', 'arpitha', 'arpitha');
 INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`, `employeeemailid`,`employeepassword) VALUES ('5', 'Maitreyee', 'Female', '2', '1', '2', 'maitreyee', 'maitreyee');
