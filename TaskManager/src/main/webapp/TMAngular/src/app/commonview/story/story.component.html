@@ -17,13 +17,13 @@
             <thead>
             <tr>
               <th scope="col">Name</th>
-              <th scope="col">Description</th>
+              <th scope="col">Status</th>
             </tr>
             </thead>
             <tbody>
             <tr *ngFor="let story of stories">
-              <td>{{story.story.storyName}}</td>
-              <td>{{story.story.storyDescription}}</td>
+              <td>{{story.story.storyId}}</td>
+              <td>{{story.story.storyStatus}}</td>
             </tr>
             </tbody>
           </table>

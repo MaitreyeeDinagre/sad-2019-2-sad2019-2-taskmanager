@@ -38,7 +38,9 @@ public class IssueDAOImpl implements IssueDAOInterface{
 	@Override
 	public Issue updateIssue(Issue issue) {
 		return issueJPARepository.save(issue);
-	
+		}
 
-}
+	public List<Issue> getByIssueStory(Integer issueStory) {
+		return issueJPARepository.getByIssueStory(issueStory);
+	}
 }

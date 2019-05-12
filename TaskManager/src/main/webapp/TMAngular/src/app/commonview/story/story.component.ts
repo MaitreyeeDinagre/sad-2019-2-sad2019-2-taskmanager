@@ -31,7 +31,7 @@ export class StoryComponent implements OnInit {
   //alert(">>>>>>>> " + value.split(":")[1]);
 
     this.httpclient
-  .get('http://localhost:8888/JIRA-lite/TaskManager/epicstorytask/getbyepic/' + value.split(":")[1])
+  .get('http://localhost:8888/JIRA-lite/TaskManager/epicstorytask/getbyepic/' + this.selectedEpicId)
   .subscribe( response => {
     this.stories = response;
     console.log(response);
@@ -61,5 +61,7 @@ getEpicList() {
     
   });
 }
+
+
 
 }

@@ -59,6 +59,12 @@ public class IssueRestController {
 	public Issue updateIssue(Issue issue) {
 		return issueDAOInterface.updateIssue(issue);
 	}
+	
+	@GetMapping("/getbystory/{storyId}")
+	@CrossOrigin(origins = "http://localhost:4200")
+	public List<Issue> getByStory(ModelMap modelMap, @PathVariable Integer storyId) {
+		return issueDAOInterface.getByIssueStory(storyId);
+	}
 
 }
 

@@ -22,8 +22,8 @@
             
               <tr *ngFor="let task of tasks">
                 <td>{{task.taskName}}</td>
-                <td>{{task.taskStatus}}</td>
-                <td>{{task.EstimatedGrand}</td> 
+                <td>{{task.status.statusName}}</td>
+                <td>{{task.taskEstimatedTime}}</td> 
               </tr>
               
             </table>
@@ -33,8 +33,8 @@
             
 
 <div class="solid">
-Log Description: <input type="text" [(ngModel)]="logDescription"><br/>
-Log Duration: <input type="number" [(ngModel)]="logDuration">Hrs<br/>
+    <span class="input-group-text">Log Description:</span> <input type="text" [(ngModel)]="logDescription"><br/>
+      <span class="input-group-text">Log Duration:</span> <input type="number" [(ngModel)]="logDuration">Hrs<br/>
 
 <p>Story</p>
 <select [(ngModel)]="selectedStoryId" >
@@ -50,8 +50,8 @@ Log Duration: <input type="number" [(ngModel)]="logDuration">Hrs<br/>
 
 
 <div class="solid">
-Issue Name: <input type="text" [(ngModel)]="issueName"><br/>
-Issue Description: <input type="text" [(ngModel)]="issueDescription"><br/>
+    <span class="input-group-text">Issue Name: </span><input type="text" [(ngModel)]="issueName"><br/>
+      <span class="input-group-text">Issue Description: </span><input type="text" [(ngModel)]="issueDescription"><br/>
 
 <p>Story</p>
 <select [(ngModel)]="issueStoryId" >
