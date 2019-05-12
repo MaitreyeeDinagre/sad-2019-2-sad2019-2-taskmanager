@@ -1,7 +1,6 @@
 <div class="solid">
-        <span class="input-group-text">Epic Name:</span> <input type="text" [formControl]="epicName"><br/>
-        <span class="input-group-text">Epic Description:</span> <input type="text" [formControl]="epicDescription"><br/>
-        <span class="input-group-text">Epic Initiative:</span> <input type="number" [formControl]="epicInitiative"><br/>
+        <span class="input-group-text">Epic Name:</span> <input type="text" [(ngModel)]="epicName"><br/>
+        <span class="input-group-text">Epic Description:</span> <input type="text" [(ngModel)]="epicDescription"><br/>
 <button (click)="createEpic()">Create Epic</button>
 </div>
 
