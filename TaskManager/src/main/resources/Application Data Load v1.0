@@ -35,11 +35,11 @@ INSERT INTO `taskmanager`.`status` (`statusid`, `statusname`, `statusdescription
 
 /* Inserting Employee Values */
 INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`, `employeeemailid`,`employeepassword) VALUES ('1', 'Admin', 'Male', '1', '1', '1', 'admin', 'admin');
-INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`, `employeeemailid`,`employeepassword) VALUES ('2', 'User', 'Male', '1', '2', '2', 'user', 'user');
+INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`, `employeeemailid`,`employeepassword) VALUES ('2', 'User', 'Male', '2', '2', '2', 'user', 'user');
 INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`, `employeeemailid`,`employeepassword) VALUES ('3', 'Sunny', 'Male', '2', '2', '1', 'sunny', 'sunny');
 INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`, `employeeemailid`,`employeepassword) VALUES ('4', 'Arpitha', 'Female', '2', '2', '3', 'arpitha', 'arpitha');
 INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`, `employeeemailid`,`employeepassword) VALUES ('5', 'Maitreyee', 'Female', '2', '1', '2', 'maitreyee', 'maitreyee');
-INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`, `employeeemailid`,`employeepassword) VALUES ('6', 'Niveditha', 'Female', '1', '3', '1', 'niveditha', 'niveditha');
+INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`, `employeeemailid`,`employeepassword) VALUES ('6', 'Niveditha', 'Female', '2', '3', '1', 'niveditha', 'niveditha');
 INSERT INTO `taskmanager`.`employee` (`employeeid`, `employeename`, `employeedetails`, `employeeprofile`, `employeerole`, `employeeinitiative`, `employeeemailid`,`employeepassword) VALUES ('7', 'Manzil', 'Male', '2', '3', '3', 'manzil', 'manzil');
 
 /* Inserting Epic Values */
